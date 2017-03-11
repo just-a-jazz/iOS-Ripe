@@ -29,6 +29,8 @@
 		34D07BFC1E74B69400E1ABCF /* ProductListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */; };
 		34D07BFE1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */; };
 		34D07BFF1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */; };
+		34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C001E74C29E00E1ABCF /* Extensions.swift */; };
+		34D07C021E74C29E00E1ABCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C001E74C29E00E1ABCF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		34D07BF71E74AF4800E1ABCF /* AddToCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCartViewController.swift; sourceTree = "<group>"; };
 		34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewCell.swift; sourceTree = "<group>"; };
 		34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		34D07C001E74C29E00E1ABCF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 			children = (
 				34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */,
 				34D07BBE1E74A96D00E1ABCF /* Main.storyboard */,
+				34D07C001E74C29E00E1ABCF /* Extensions.swift */,
 				34D07BF11E74AF1E00E1ABCF /* ProductListCollectionViewController.swift */,
 				34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */,
 				34D07BF71E74AF4800E1ABCF /* AddToCartViewController.swift */,
@@ -294,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D07BF21E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
+				34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */,
 				34D07BEC1E74AEF100E1ABCF /* LoginViewController.swift in Sources */,
 				34D07BFB1E74B69400E1ABCF /* ProductListCollectionViewCell.swift in Sources */,
 				34D07BFE1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */,
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D07BF31E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
+				34D07C021E74C29E00E1ABCF /* Extensions.swift in Sources */,
 				34D07BED1E74AEF100E1ABCF /* LoginViewController.swift in Sources */,
 				34D07BF01E74AF0900E1ABCF /* CartTableViewController.swift in Sources */,
 				34D07BF91E74AF4800E1ABCF /* AddToCartViewController.swift in Sources */,
