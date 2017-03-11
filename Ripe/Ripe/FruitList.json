@@ -1,0 +1,13 @@
+{
+    "fruits":[
+        {
+              "Apple": {
+                    "price": 1.50,
+                    "image": "apple",
+              
+              }
+        },
+        {
+              
+        }
+}
