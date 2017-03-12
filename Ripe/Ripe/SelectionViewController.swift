@@ -9,27 +9,50 @@
 import UIKit
 
 class SelectionViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var containerView: UIView!
+    
+    var tutorialPageViewController: SelectionPageViewController? {
+        didSet {
+            tutorialPageViewController?.tutorialDelegate = self
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pageControl.addTarget(self, action: #selector(SelectionViewController.didChangePageControlValue), for: .valueChanged)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tutorialPageViewController = segue.destination as? SelectionPageViewController {
+            self.tutorialPageViewController = tutorialPageViewController
+        }
+    }
+    
+    @IBAction func didTapNextButton(_ sender: UIButton) {
+        tutorialPageViewController?.scrollToNextViewController()
+    }
+    
+    /**
+     Fired when the user taps on the pageControl to change its current page.
+     */
+    func didChangePageControlValue() {
+        tutorialPageViewController?.scrollToViewController(index: pageControl.currentPage)
+    }
+}
 
+extension SelectionViewController: SelectionPageViewControllerDelegate {
+    
+    func tutorialPageViewController(_ tutorialPageViewController: SelectionPageViewController,
+                                    didUpdatePageCount count: Int) {
+        pageControl.numberOfPages = count
+    }
+    
+    func tutorialPageViewController(_ tutorialPageViewController: SelectionPageViewController,
+                                    didUpdatePageIndex index: Int) {
+        pageControl.currentPage = index
+    }
+    
 }

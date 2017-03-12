@@ -143,6 +143,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="qyK-fN-ifp" id="h4r-Ex-ZDF"/>
+                        <outlet property="pageControl" destination="MT2-lY-DEa" id="qff-Gc-V6z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCf-h7-hOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,7 +290,7 @@
         <scene sceneID="CIK-Cr-PIC">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductListCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C8G-q5-eeL" customClass="ProductListCollectionViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FeO-O8-cP2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FeO-O8-cP2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
