@@ -63,7 +63,7 @@ class ProductListCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductListCollectionViewCell
     
         // Configure the cell
-    
+        
         return cell
     }
 
