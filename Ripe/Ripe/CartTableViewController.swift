@@ -10,8 +10,8 @@ import UIKit
 
 class CartTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var CartTableView: UITableView!
-    @IBOutlet weak var CheckoutButton: UIButton!
+    @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var checkoutButton: UIButton!
     
     var foodImage = [#imageLiteral(resourceName: "sapota"), #imageLiteral(resourceName: "starfruit"), #imageLiteral(resourceName: "pomegranate"), #imageLiteral(resourceName: "jackfruit")]
     var foodName = ["Mango", "Apples", "Bananas", "Pineapples"]
@@ -22,8 +22,8 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CartTableView.delegate = self
-        CartTableView.dataSource = self
+        initializeTableView()
+        
 
         self.title = "Cart"
         
@@ -34,6 +34,15 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func initializeTableView() {
+        // Set up delegates
+        cartTableView.delegate = self
+        cartTableView.dataSource = self
+        
+        // Set up appearance
+        cartTableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data 
