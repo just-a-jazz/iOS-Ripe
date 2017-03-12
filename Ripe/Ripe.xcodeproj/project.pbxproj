@@ -924,7 +924,7 @@
 				TargetAttributes = {
 					34D07BB61E74A96C00E1ABCF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4626H9HMFC;
+						DevelopmentTeam = GH7595L99J;
 						ProvisioningStyle = Automatic;
 					};
 					34D07BCA1E74A96D00E1ABCF = {
@@ -1501,8 +1501,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4626H9HMFC;
+				DEVELOPMENT_TEAM = GH7595L99J;
 				INFOPLIST_FILE = Ripe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackvic.Ripe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1516,8 +1517,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4626H9HMFC;
+				DEVELOPMENT_TEAM = GH7595L99J;
 				INFOPLIST_FILE = Ripe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackvic.Ripe;
 				PRODUCT_NAME = "$(TARGET_NAME)";

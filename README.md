@@ -1,5 +1,5 @@
-![logo](Designs/logo.png) Ripe
-
+![logo](Designs/logo.png)
+#Ripe
 ## Overview
 
 ### Summary
