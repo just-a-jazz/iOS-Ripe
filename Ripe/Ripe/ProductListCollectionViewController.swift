@@ -17,12 +17,11 @@ class ProductListCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Do any additional setup after loading the view.
         
+        loadData()
+    }
+    
+    func loadData() {
         DispatchQueue.global(qos: .userInitiated).async {
             self.products = self.getProduce()
             DispatchQueue.main.async {
