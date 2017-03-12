@@ -17,7 +17,7 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     var predictLabel: String?
     
     @IBOutlet weak var productListCollectionView: UICollectionView!
-    @IBOutlet weak var recognizeButton: UIButton!
+    @IBOutlet weak var recognizeButton: ActionButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
