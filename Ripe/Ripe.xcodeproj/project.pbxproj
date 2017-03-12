@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		189AD5C91E7519BE00088545 /* SelectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */; };
-		189AD5CB1E752C3100088545 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5CA1E752C3100088545 /* SelectionViewController.swift */; };
+		189AD5C91E7519BE00088545 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		189AD5CB1E752C3100088545 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		34D07BBB1E74A96D00E1ABCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */; };
 		34D07BC01E74A96D00E1ABCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BBE1E74A96D00E1ABCF /* Main.storyboard */; };
 		34D07BC21E74A96D00E1ABCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BC11E74A96D00E1ABCF /* Assets.xcassets */; };
@@ -162,8 +162,6 @@
 				34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */,
 				34D07BBE1E74A96D00E1ABCF /* Main.storyboard */,
 				34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */,
-				189AD5CA1E752C3100088545 /* SelectionViewController.swift */,
-				189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */,
 				34D07C001E74C29E00E1ABCF /* Extensions.swift */,
 				34D07BF11E74AF1E00E1ABCF /* ProductListCollectionViewController.swift */,
 				34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */,
@@ -301,7 +299,7 @@
 				TargetAttributes = {
 					34D07BB61E74A96C00E1ABCF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4626H9HMFC;
+						DevelopmentTeam = GH7595L99J;
 						ProvisioningStyle = Automatic;
 					};
 					34D07BCA1E74A96D00E1ABCF = {
@@ -511,9 +509,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D07BF21E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
-				189AD5CB1E752C3100088545 /* SelectionViewController.swift in Sources */,
+				189AD5CB1E752C3100088545 /* (null) in Sources */,
 				34D07C0B1E74EE7B00E1ABCF /* setupTextField.swift in Sources */,
-				189AD5C91E7519BE00088545 /* SelectionPageViewController.swift in Sources */,
+				189AD5C91E7519BE00088545 /* (null) in Sources */,
 				34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */,
 				34D07BEC1E74AEF100E1ABCF /* LoginViewController.swift in Sources */,
 				34D07BFB1E74B69400E1ABCF /* ProductListCollectionViewCell.swift in Sources */,
@@ -680,8 +678,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE97179C335D3D83F28C6C02 /* Pods-Ripe.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4626H9HMFC;
+				DEVELOPMENT_TEAM = GH7595L99J;
 				INFOPLIST_FILE = Ripe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackvic.Ripe;
@@ -694,8 +693,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB3E70F2F9F8FBA6A7E0186E /* Pods-Ripe.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4626H9HMFC;
+				DEVELOPMENT_TEAM = GH7595L99J;
 				INFOPLIST_FILE = Ripe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackvic.Ripe;
