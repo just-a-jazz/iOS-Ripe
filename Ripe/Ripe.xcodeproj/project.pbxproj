@@ -132,6 +132,7 @@
 			children = (
 				34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */,
 				34D07BBE1E74A96D00E1ABCF /* Main.storyboard */,
+				34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */,
 				189AD5CA1E752C3100088545 /* SelectionViewController.swift */,
 				189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */,
 				34D07C001E74C29E00E1ABCF /* Extensions.swift */,
@@ -141,7 +142,6 @@
 				34D07BF41E74AF3700E1ABCF /* CheckoutViewController.swift */,
 				34D07BEE1E74AF0900E1ABCF /* CartTableViewController.swift */,
 				34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */,
-				34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */,
 				34D07BC11E74A96D00E1ABCF /* Assets.xcassets */,
 				34D07BC31E74A96D00E1ABCF /* LaunchScreen.storyboard */,
 				34D07BC61E74A96D00E1ABCF /* Info.plist */,
