@@ -10,12 +10,16 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //navigationBar.barTintColor = primaryColor
+        
         return true
     }
 

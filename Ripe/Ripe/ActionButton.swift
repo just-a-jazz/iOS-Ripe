@@ -12,10 +12,13 @@ import UIKit
 class ActionButton: UIButton {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        backgroundColor = .orange
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
+        
+        backgroundColor = primaryColor
         titleLabel?.textColor = .white
+        tintColor = UIColor.white
+        
         layer.masksToBounds = true
         layer.cornerRadius = frame.height / 2
-        contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
     }
 }

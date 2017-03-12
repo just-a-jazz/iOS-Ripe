@@ -10,15 +10,20 @@ import UIKit
 
 class CartTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var CartTableView: UITableView!
-    @IBOutlet weak var CheckoutButton: UIButton!
+    @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var checkoutButton: UIButton!
+    
+    var foodImage = [#imageLiteral(resourceName: "sapota"), #imageLiteral(resourceName: "starfruit"), #imageLiteral(resourceName: "pomegranate"), #imageLiteral(resourceName: "jackfruit")]
+    var foodName = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodAmount = [2, 5.2, 12, 4]
+    var foodDollar = [4.32, 23, 23, 12]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CartTableView.delegate = self
-        CartTableView.dataSource = self
+        initializeTableView()
+        
 
         self.title = "Cart"
         
@@ -29,72 +34,45 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        customizeUIButton()
     }
     
-    
-    func customizeUIButton() {
-        CheckoutButton.backgroundColor = UIColor.orange
-        CheckoutButton.tintColor = UIColor.white
-        CheckoutButton.layer.masksToBounds = true
-        CheckoutButton.layer.cornerRadius = CheckoutButton.frame.height / 2
-        CheckoutButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func initializeTableView() {
+        // Set up delegates
+        cartTableView.delegate = self
+        cartTableView.dataSource = self
+        
+        // Set up appearance
+        cartTableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return foodName.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartItemIdentifier", for: indexPath) as! CartTableViewCell
-
-        // Configure the cell...
-
+        
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
+        
+        // Cell Properties
+        cell.produceImageView.image = foodImage[indexPath.row] as UIImage
+        cell.produceNameLabel.text = "\(foodName[indexPath.row])"
+        cell.produceAmountLabel.text = "\(String(foodAmount[indexPath.row]))"
+        cell.produceDollarLabel.text = "\(foodDollar[indexPath.row])"
+        
+        // Cell appearance
+        cell.produceImageView.layer.masksToBounds = true
+        cell.produceImageView.layer.cornerRadius = cell.produceImageView.frame.height / 2
+        cell.produceImageView.layer.borderWidth = 2
+        cell.produceImageView.layer.borderColor = primaryColor.cgColor
+        
         return cell
     }
-
-    // Override to support conditional editing of the table view.
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    // Override to support editing the table view.
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
     
     // Go to the select product to update the selected product
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

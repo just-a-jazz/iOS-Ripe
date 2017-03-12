@@ -10,22 +10,23 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var logoIconView: UIView!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        customizeIconView()
+        
         customizeTextField()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func customizeIconView() {
+        logoIconView.layer.cornerRadius = logoIconView.bounds.size.width / 2
+        logoIconView.layer.masksToBounds = true
     }
     
     func customizeTextField() {
