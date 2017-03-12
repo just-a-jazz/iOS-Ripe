@@ -17,7 +17,7 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     var predictLabel: String?
     
     @IBOutlet weak var productListCollectionView: UICollectionView!
-    @IBOutlet weak var recognizeButton: ActionButton!
+    @IBOutlet weak var recognizeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,26 +52,11 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
      }
      */
     
-    
-    
-    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        // get taken picture as UIImage
-        let uiImg = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        let network = Network()
-        
-        dismiss(animated: true, completion: ({
-            self.performSegue(withIdentifier: "Add Cart Item", sender: self)
-        }))
-    }*/
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // get taken picture as UIImage
         let uiImg = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         let network = Network()
-        
         predictLabel = network.getPrediction(image: uiImg)
         
         dismiss(animated: true, completion: ({
@@ -95,7 +80,11 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductListCollectionViewCell
         
+        let produce = products[indexPath.row]
+        
         // Configure the cell
+        cell.ProduceImage.image = UIImage(named: produce.image)
+        cell.ProduceLabel.text = produce.name
         
         return cell
     }
@@ -154,17 +143,12 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        
-        if predictLabel == nil {
-            predictLabel = ""
-        }
-        
         if let destination = segue.destination as? SubViewController {
             destination.products = products
         }
         
         if let destination = segue.destination as? AddToCartViewController {
-            destination.productNameLabel.text = predictLabel!
+            destination.predicted = self.predictLabel!
         }
     }
     

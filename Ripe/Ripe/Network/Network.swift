@@ -18,8 +18,32 @@ class Network: NSObject {
     private var ciContext : CIContext!
     private var sourceTexture : MTLTexture? = nil
     
+    private var predictLabel: String?
     
     required override init() {
+        // Load default device.
+        device = MTLCreateSystemDefaultDevice()
+        
+        // Make sure the current device supports MetalPerformanceShaders.
+        guard MPSSupportsMTLDevice(device) else {
+            print("Metal Performance Shaders not Supported on current Device")
+            return
+        }
+        
+        // Load any resources required for rendering.
+        
+        // Create new command queue.
+        commandQueue = device!.makeCommandQueue()
+        
+        // make a textureLoader to get our input images as MTLTextures
+        textureLoader = MTKTextureLoader(device: device!)
+        
+        // Load the appropriate Network
+        Net = Inception3Net(withCommandQueue: commandQueue)
+        
+        // we use this CIContext as one of the steps to get a MTLTexture
+        ciContext = CIContext.init(mtlDevice: device)
+    
     }
     
     func getPrediction(image: UIImage)->String {
@@ -47,8 +71,11 @@ class Network: NSObject {
             fatalError("Unexpected error ocurred: \(error.localizedDescription).")
         }
         
+        
+        runNetwork()
+        
         // run inference neural network to get predictions and display them
-        return runNetwork()
+        return predictLabel!
     }
     
     /**
@@ -58,11 +85,11 @@ class Network: NSObject {
      - Returns:
      Void
      */
-    private func runNetwork()->String {
+    private func runNetwork() {
         
         // to deliver optimal performance we leave some resources used in MPSCNN to be released at next call of autoreleasepool,
         // so the user can decide the appropriate time to release this
-        autoreleasepool{ () -> String in 
+        autoreleasepool{
             // encoding command buffer
             let commandBuffer = commandQueue.makeCommandBuffer()
             
@@ -76,12 +103,10 @@ class Network: NSObject {
             // display top-5 predictions for what the object should be labelled
             let label = Net!.getLabel()
             
-            return label[0]
+            predictLabel = label[0]
             
             //predictLabel.text = label
             //predictLabel.isHidden = false
         }
-        
-        return ""
     }
 }
