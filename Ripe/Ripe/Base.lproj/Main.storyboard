@@ -24,7 +24,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fruit Background" translatesAutoresizingMaskIntoConstraints="NO" id="G66-Zg-zgy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxS-Dj-PZc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxS-Dj-PZc">
                                 <rect key="frame" x="88" y="348" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6jM-mc-X7o"/>
@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-s8-f3v">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-s8-f3v">
                                 <rect key="frame" x="87" y="414" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GVp-Ml-haH"/>
@@ -44,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-3x-OnP" customClass="ActionButton" customModule="Ripe" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-3x-OnP" customClass="ActionButton" customModule="Ripe" customModuleProvider="target">
                                 <rect key="frame" x="113" y="489" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Gjh-yY-8Ij"/>
@@ -56,14 +56,31 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-fF-xJb">
-                                <rect key="frame" x="133" y="273" width="109" height="67"/>
+                                <rect key="frame" x="133" y="260" width="109" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pineapple Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-Wm-gm7">
-                                <rect key="frame" x="88" y="65" width="200" height="200"/>
-                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-Hk-lZa">
+                                <rect key="frame" x="103" y="70" width="170" height="170"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pineapple Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-Wm-gm7">
+                                        <rect key="frame" x="18" y="22" width="134" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="6mc-c6-Gju"/>
+                                    <constraint firstAttribute="width" constant="170" id="Vcz-2P-GTg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,12 +88,12 @@
                             <constraint firstItem="wa9-s8-f3v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gp-ZB-ND5"/>
                             <constraint firstAttribute="trailing" secondItem="G66-Zg-zgy" secondAttribute="trailing" id="2hn-EX-V1t"/>
                             <constraint firstItem="GxS-Dj-PZc" firstAttribute="top" secondItem="mhl-fF-xJb" secondAttribute="bottom" constant="8" id="4cu-7E-vH1"/>
-                            <constraint firstItem="tuM-Wm-gm7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7df-fD-bHy"/>
-                            <constraint firstItem="tuM-Wm-gm7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="Dcj-wE-5xj"/>
+                            <constraint firstItem="eXw-Hk-lZa" firstAttribute="centerX" secondItem="mhl-fF-xJb" secondAttribute="centerX" id="AKp-Rh-PgH"/>
                             <constraint firstItem="G66-Zg-zgy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Egy-oO-hf1"/>
                             <constraint firstItem="GxS-Dj-PZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4s-pG-KQb"/>
+                            <constraint firstItem="eXw-Hk-lZa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="L7O-tD-XFc"/>
                             <constraint firstItem="mhl-fF-xJb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mdk-hf-jFP"/>
-                            <constraint firstItem="mhl-fF-xJb" firstAttribute="top" secondItem="tuM-Wm-gm7" secondAttribute="bottom" constant="8" id="hTt-ie-X6b"/>
+                            <constraint firstItem="mhl-fF-xJb" firstAttribute="top" secondItem="eXw-Hk-lZa" secondAttribute="bottom" constant="20" id="bfD-Rp-c6X"/>
                             <constraint firstItem="G66-Zg-zgy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j61-gD-rbw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G66-Zg-zgy" secondAttribute="bottom" id="msP-UT-Lmh"/>
                             <constraint firstItem="wa9-s8-f3v" firstAttribute="top" secondItem="GxS-Dj-PZc" secondAttribute="bottom" constant="16" id="nhl-Tx-x8K"/>
@@ -169,7 +186,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tR4-rs-tvR" id="Efm-fn-7v9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHF-5l-y92">
@@ -437,7 +454,7 @@
     </scenes>
     <resources>
         <image name="Fruit Background" width="375" height="667"/>
-        <image name="Pineapple Icon" width="200" height="200"/>
+        <image name="Pineapple Icon" width="319" height="741"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Fgr-NN-MjE"/>
