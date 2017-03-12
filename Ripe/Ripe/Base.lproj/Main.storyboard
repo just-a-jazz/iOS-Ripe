@@ -327,6 +327,9 @@
                                     <constraint firstAttribute="width" constant="150" id="xlo-Nh-ydm"/>
                                 </constraints>
                                 <state key="normal" title="Recognize"/>
+                                <connections>
+                                    <action selector="recognizeImage:" destination="PFe-0a-HvQ" eventType="touchUpInside" id="afz-dR-Hki"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -397,7 +400,10 @@
                                     <constraint firstAttribute="height" constant="50" id="Ty1-Xc-Yzo"/>
                                     <constraint firstAttribute="width" constant="150" id="vBZ-1C-mPW"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Recognize"/>
+                                <connections>
+                                    <action selector="recognizeImage:" destination="qBm-4K-PU0" eventType="touchUpInside" id="87I-is-uyE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -415,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aff-aI-iVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6637.6000000000004" y="178.56071964017991"/>
+            <point key="canvasLocation" x="6646" y="331"/>
         </scene>
         <!--Add To Cart View Controller-->
         <scene sceneID="7M6-7r-XRZ">

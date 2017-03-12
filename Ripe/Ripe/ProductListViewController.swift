@@ -160,8 +160,11 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         }
         
         if let destination = segue.destination as? SubViewController {
-            destination.categoryNameLabel.text = predictLabel!
             destination.products = products
+        }
+        
+        if let destination = segue.destination as? AddToCartViewController {
+            destination.productNameLabel.text = predictLabel!
         }
     }
     
