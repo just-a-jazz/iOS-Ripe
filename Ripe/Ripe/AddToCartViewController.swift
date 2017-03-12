@@ -47,7 +47,7 @@ class AddToCartViewController: UIViewController {
         }
         
         if let text = priceToLoad {
-            priceLabel.text = "$\(text)"
+            priceLabel.text = String(format: "$%.2f", text)
         }
     }
     

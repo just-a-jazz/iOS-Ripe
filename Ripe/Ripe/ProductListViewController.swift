@@ -120,7 +120,8 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if (products[indexPath.row].children?.isEmpty)! {
+        if true {
+            selected  = indexPath.row
             performSegue(withIdentifier: "Add Cart Item", sender: self)
         } else {
             
@@ -182,7 +183,12 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
             
             destination.priceToLoad = products[selected].price
             destination.imageToLoad = UIImage(named: products[selected].image)
-            destination.nameToLoad = self.predictLabel!
+            if predictLabel == nil {
+                destination.nameToLoad = products[selected].name
+            } else {
+                destination.nameToLoad = self.predictLabel!
+
+            }
         }
     }
     
