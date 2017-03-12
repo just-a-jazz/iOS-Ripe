@@ -16,6 +16,8 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     var products: [Produce] = [Produce]()
     var predictLabel: String?
     
+    var selected = -1
+    
     @IBOutlet weak var productListCollectionView: UICollectionView!
     @IBOutlet weak var recognizeButton: UIButton!
     
@@ -104,7 +106,17 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Add Cart Item", sender: self)
+        
+        if (products[indexPath.row].children?.isEmpty)! {
+            performSegue(withIdentifier: "Add Cart Item", sender: self)
+        } else {
+            
+            selected = indexPath.row
+            
+            performSegue(withIdentifier: "Show Children", sender: self)
+        }
+        
+        
     }
     
     
@@ -144,7 +156,10 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         // Pass the selected object to the new view controller.
         
         if let destination = segue.destination as? SubViewController {
-            destination.products = products
+            destination.categoryName = products[selected].name
+            destination.coverPhoto = products[selected].cover
+            
+            destination.products = products[selected].children
         }
         
         if let destination = segue.destination as? AddToCartViewController {

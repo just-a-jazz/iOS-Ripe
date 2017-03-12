@@ -19,6 +19,9 @@ class SubViewController: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var recognizeImageButton: UIButton!
     
     var products: [Produce]!
+    var categoryName: String!
+    var coverPhoto: String!
+    
     var predictLabel: String?
 
     
@@ -48,7 +51,11 @@ class SubViewController: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductListCollectionViewCell
         
+        let produce = products[indexPath.row]
+        
         // Configure the cell
+        cell.ProduceImage.image = UIImage(named: produce.image)
+        cell.ProduceLabel.text = produce.name
         
         return cell
     }

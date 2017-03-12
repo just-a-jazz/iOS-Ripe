@@ -46,6 +46,10 @@ class LoginViewController: UIViewController {
     @IBAction func LoginUser(_ sender: UIButton) {
         performSegue(withIdentifier: "Login User", sender: self)
     }
+    
+    @IBAction func unwindLogoutUser(_ sender: UIStoryboardSegue) {
+        
+    }
 
     
     // MARK: - Navigation
