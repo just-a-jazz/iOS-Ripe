@@ -38,7 +38,7 @@ class AddToCartViewController: UIViewController {
     func loadImage() {
         productImageView.image = imageToLoad!
         productNameLabel.text = nameToLoad!
-        priceLabel.text = "\(priceToLoad!)/100g"
+        priceLabel.text = "$\(priceToLoad!)"
     }
     
     
