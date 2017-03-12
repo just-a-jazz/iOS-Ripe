@@ -12,7 +12,9 @@ import UIKit
 class ActionButton: UIButton {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        backgroundColor = .orange
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
+        
+        backgroundColor = primaryColor
         titleLabel?.textColor = .white
         
         layer.masksToBounds = true

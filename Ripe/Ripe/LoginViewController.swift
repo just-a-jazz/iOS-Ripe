@@ -15,12 +15,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
-    
+    let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         customizeIconView()
+        
         customizeTextField()
     }
     
