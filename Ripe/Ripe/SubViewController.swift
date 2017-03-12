@@ -16,7 +16,7 @@ class SubViewController: UIViewController, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var productCollectionView: UICollectionView!
-    @IBOutlet weak var recognizeImageButton: ActionButton!
+    @IBOutlet weak var recognizeImageButton: UIButton!
     
     var products: [Produce]!
     var predictLabel: String?

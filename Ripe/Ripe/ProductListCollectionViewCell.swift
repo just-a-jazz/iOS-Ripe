@@ -9,5 +9,6 @@
 import UIKit
 
 class ProductListCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var ProduceImage: UIImageView!
+    @IBOutlet weak var ProduceLabel: UILabel!
 }

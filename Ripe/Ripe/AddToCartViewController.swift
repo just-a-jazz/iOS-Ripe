@@ -15,6 +15,7 @@ class AddToCartViewController: UIViewController {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var priceLabel: UILabel!
     
+    var predicted: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
