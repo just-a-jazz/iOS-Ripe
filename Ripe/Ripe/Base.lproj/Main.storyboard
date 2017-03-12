@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1986" y="153"/>
         </scene>
-        <!--Cart Table View Controller-->
+        <!--Cart-->
         <scene sceneID="ryl-9c-5xa">
             <objects>
-                <viewController storyboardIdentifier="CartTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l6h-Au-Fnm" customClass="CartTableViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartTableViewController" title="Cart" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l6h-Au-Fnm" customClass="CartTableViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8RC-yg-0ID"/>
                         <viewControllerLayoutGuide type="bottom" id="ecQ-mz-8wP"/>
@@ -180,7 +180,7 @@
                                 </constraints>
                                 <state key="normal" title="Checkout"/>
                                 <connections>
-                                    <action selector="CheckoutCart:" destination="l6h-Au-Fnm" eventType="touchUpInside" id="ioW-Af-HgS"/>
+                                    <segue destination="dXd-GK-bYw" kind="show" identifier="Buy" id="d2w-0o-DLq"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PE5-AY-lG2">
@@ -274,12 +274,11 @@
                             <constraint firstAttribute="trailing" secondItem="PE5-AY-lG2" secondAttribute="trailing" id="lIZ-0b-g0z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fJl-CR-qeJ"/>
+                    <navigationItem key="navigationItem" title="Cart" id="fJl-CR-qeJ"/>
                     <connections>
-                        <outlet property="CheckoutButton" destination="45L-6c-faH" id="5V5-Oa-jzq"/>
                         <outlet property="cartTableView" destination="PE5-AY-lG2" id="aiM-ji-xwU"/>
                         <outlet property="checkoutButton" destination="45L-6c-faH" id="mMh-9E-OCU"/>
-                        <segue destination="zsg-rz-YxS" kind="show" identifier="Add To Cart" id="Fgr-NN-MjE"/>
+                        <segue destination="zsg-rz-YxS" kind="show" identifier="Edit Product" id="Fgr-NN-MjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSZ-Ek-iCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="4487" y="1141"/>
         </scene>
-        <!--Checkout View Controller-->
+        <!--Checkout-->
         <scene sceneID="Xh3-ti-dVG">
             <objects>
                 <viewController id="dXd-GK-bYw" customClass="CheckoutViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
@@ -454,40 +453,13 @@
                     <view key="view" contentMode="scaleToFill" id="tab-2r-MRP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moC-pW-hp4">
-                                <rect key="frame" x="150" y="323" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NwN-en-fNv"/>
+                    <navigationItem key="navigationItem" title="Checkout" id="NwN-en-fNv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6U-G8-CVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="1039"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="y93-YZ-RLs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jac-9X-sqw" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLq-2r-cYq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dXd-GK-bYw" kind="relationship" relationship="rootViewController" id="sZn-Od-UVq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1M6-CB-vQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1004" y="1039"/>
+            <point key="canvasLocation" x="3153" y="1839"/>
         </scene>
         <!--Cart Table Navigation-->
         <scene sceneID="Hn0-Wq-kS2">

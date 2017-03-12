@@ -21,12 +21,8 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initializeTableView()
-        
-
-        self.title = "Cart"
-        
 
         
         // Uncomment the following line to preserve selection between presentations
@@ -59,7 +55,7 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
         
-        // Cell Properties
+        // Cell properties
         cell.produceImageView.image = foodImage[indexPath.row] as UIImage
         cell.produceNameLabel.text = "\(foodName[indexPath.row])"
         cell.produceAmountLabel.text = "\(String(foodAmount[indexPath.row]))"
@@ -76,19 +72,18 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // Go to the select product to update the selected product
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Select Product", sender: self)
+        performSegue(withIdentifier: "Edit Product", sender: indexPath)
     }
     
     
     // MARK: - Actions
     
     @IBAction func CheckoutCart(_ sender: UIButton) {
-        performSegue(withIdentifier: "Checkout Cart", sender: self)
+        performSegue(withIdentifier: "Buy", sender: self)
     }
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
