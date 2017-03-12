@@ -13,10 +13,9 @@
 		34D07BC51E74A96D00E1ABCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BC31E74A96D00E1ABCF /* LaunchScreen.storyboard */; };
 		34D07BD01E74A96D00E1ABCF /* RipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BCF1E74A96D00E1ABCF /* RipeTests.swift */; };
 		34D07BDB1E74A96D00E1ABCF /* RipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BDA1E74A96D00E1ABCF /* RipeUITests.swift */; };
-		34D07BE91E74AB0B00E1ABCF /* FruitList.json in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BE81E74AB0B00E1ABCF /* FruitList.json */; };
-		34D07BEA1E74AB0B00E1ABCF /* FruitList.json in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BE81E74AB0B00E1ABCF /* FruitList.json */; };
+		34D07BE91E74AB0B00E1ABCF /* ProduceList.json in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BE81E74AB0B00E1ABCF /* ProduceList.json */; };
+		34D07BEA1E74AB0B00E1ABCF /* ProduceList.json in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BE81E74AB0B00E1ABCF /* ProduceList.json */; };
 		34D07BEC1E74AEF100E1ABCF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */; };
-		34D07BED1E74AEF100E1ABCF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */; };
 		34D07BEF1E74AF0900E1ABCF /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BEE1E74AF0900E1ABCF /* CartTableViewController.swift */; };
 		34D07BF01E74AF0900E1ABCF /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BEE1E74AF0900E1ABCF /* CartTableViewController.swift */; };
 		34D07BF21E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BF11E74AF1E00E1ABCF /* ProductListCollectionViewController.swift */; };
@@ -30,9 +29,10 @@
 		34D07BFE1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */; };
 		34D07BFF1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */; };
 		34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C001E74C29E00E1ABCF /* Extensions.swift */; };
-		34D07C021E74C29E00E1ABCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C001E74C29E00E1ABCF /* Extensions.swift */; };
 		34D07C0B1E74EE7B00E1ABCF /* setupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */; };
 		34D07C0C1E74EE7B00E1ABCF /* setupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */; };
+		34D07C111E75112D00E1ABCF /* Produce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C101E75112D00E1ABCF /* Produce.swift */; };
+		34D07C121E75112D00E1ABCF /* Produce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C101E75112D00E1ABCF /* Produce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		34D07BD61E74A96D00E1ABCF /* RipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D07BDA1E74A96D00E1ABCF /* RipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeUITests.swift; sourceTree = "<group>"; };
 		34D07BDC1E74A96D00E1ABCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34D07BE81E74AB0B00E1ABCF /* FruitList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FruitList.json; path = Ripe/FruitList.json; sourceTree = "<group>"; };
+		34D07BE81E74AB0B00E1ABCF /* ProduceList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ProduceList.json; path = Ripe/ProduceList.json; sourceTree = "<group>"; };
 		34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34D07BEE1E74AF0900E1ABCF /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		34D07BF11E74AF1E00E1ABCF /* ProductListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 		34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		34D07C001E74C29E00E1ABCF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupTextField.swift; sourceTree = "<group>"; };
+		34D07C101E75112D00E1ABCF /* Produce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Produce.swift; path = Classes/Produce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +106,7 @@
 		34D07BAE1E74A96C00E1ABCF = {
 			isa = PBXGroup;
 			children = (
-				34D07BE81E74AB0B00E1ABCF /* FruitList.json */,
+				34D07BE81E74AB0B00E1ABCF /* ProduceList.json */,
 				34D07BB91E74A96D00E1ABCF /* Ripe */,
 				34D07BCE1E74A96D00E1ABCF /* RipeTests */,
 				34D07BD91E74A96D00E1ABCF /* RipeUITests */,
@@ -139,6 +140,7 @@
 				34D07BC11E74A96D00E1ABCF /* Assets.xcassets */,
 				34D07BC31E74A96D00E1ABCF /* LaunchScreen.storyboard */,
 				34D07BC61E74A96D00E1ABCF /* Info.plist */,
+				34D07C131E75113300E1ABCF /* Classes */,
 				34D07C091E74EE5400E1ABCF /* Buttons */,
 			);
 			path = Ripe;
@@ -168,6 +170,14 @@
 				34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */,
 			);
 			name = Buttons;
+			sourceTree = "<group>";
+		};
+		34D07C131E75113300E1ABCF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				34D07C101E75112D00E1ABCF /* Produce.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D07BE91E74AB0B00E1ABCF /* FruitList.json in Resources */,
+				34D07BE91E74AB0B00E1ABCF /* ProduceList.json in Resources */,
 				34D07BC51E74A96D00E1ABCF /* LaunchScreen.storyboard in Resources */,
 				34D07BC21E74A96D00E1ABCF /* Assets.xcassets in Resources */,
 				34D07BC01E74A96D00E1ABCF /* Main.storyboard in Resources */,
@@ -291,7 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D07BEA1E74AB0B00E1ABCF /* FruitList.json in Resources */,
+				34D07BEA1E74AB0B00E1ABCF /* ProduceList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +328,7 @@
 				34D07BEF1E74AF0900E1ABCF /* CartTableViewController.swift in Sources */,
 				34D07BF81E74AF4800E1ABCF /* AddToCartViewController.swift in Sources */,
 				34D07BF51E74AF3700E1ABCF /* CheckoutViewController.swift in Sources */,
+				34D07C111E75112D00E1ABCF /* Produce.swift in Sources */,
 				34D07BBB1E74A96D00E1ABCF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,13 +339,12 @@
 			files = (
 				34D07BF31E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
 				34D07C0C1E74EE7B00E1ABCF /* setupTextField.swift in Sources */,
-				34D07C021E74C29E00E1ABCF /* Extensions.swift in Sources */,
-				34D07BED1E74AEF100E1ABCF /* LoginViewController.swift in Sources */,
 				34D07BF01E74AF0900E1ABCF /* CartTableViewController.swift in Sources */,
 				34D07BF91E74AF4800E1ABCF /* AddToCartViewController.swift in Sources */,
 				34D07BF61E74AF3700E1ABCF /* CheckoutViewController.swift in Sources */,
 				34D07BFC1E74B69400E1ABCF /* ProductListCollectionViewCell.swift in Sources */,
 				34D07BD01E74A96D00E1ABCF /* RipeTests.swift in Sources */,
+				34D07C121E75112D00E1ABCF /* Produce.swift in Sources */,
 				34D07BFF1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

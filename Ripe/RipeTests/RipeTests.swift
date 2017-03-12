@@ -21,16 +21,27 @@ class RipeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testParsing() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        if let produceList
+            = Dictionary<String, AnyObject>.loadJSONFromBundle() {
+            //print(produceList)
+            let parsed = produceList.dictToProduce()
+            
+            XCTAssert(parsed.count == 16)
+            XCTAssert(parsed == parsed.sorted(by: {$0.name > $1.name}))
+        }
     }
     
+    /*
     func testPerformanceExample() {
         // This is an example of a performance test case.
+        
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-    
+    */
 }
