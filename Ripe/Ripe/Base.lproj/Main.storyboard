@@ -127,6 +127,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="qyK-fN-ifp" id="h4r-Ex-ZDF"/>
+                        <outlet property="pageControl" destination="MT2-lY-DEa" id="qff-Gc-V6z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCf-h7-hOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
