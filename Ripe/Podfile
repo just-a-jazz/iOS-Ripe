@@ -6,9 +6,6 @@ target 'Ripe' do
   use_frameworks!
 
   # Pods for Ripe
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'Firebase/Auth'
 
 
   target 'RipeTests' do
