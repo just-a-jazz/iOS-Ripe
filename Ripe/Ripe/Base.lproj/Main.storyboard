@@ -44,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-3x-OnP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-3x-OnP" customClass="ActionButton" customModule="Ripe" customModuleProvider="target">
                                 <rect key="frame" x="113" y="489" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Gjh-yY-8Ij"/>
@@ -55,7 +55,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mO-sX-W6j"/>
+                                    <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tED-2D-KhT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-fF-xJb">
@@ -88,8 +88,9 @@
                     </view>
                     <connections>
                         <outlet property="LoginButton" destination="U3X-3x-OnP" id="nQI-MK-W3S"/>
-                        <outlet property="PasswordField" destination="wa9-s8-f3v" id="ksA-N6-SWw"/>
-                        <outlet property="UsernameField" destination="GxS-Dj-PZc" id="4iv-zS-cdX"/>
+                        <outlet property="loginButton" destination="U3X-3x-OnP" id="Hsv-a4-i6f"/>
+                        <outlet property="passwordField" destination="wa9-s8-f3v" id="BwI-xJ-wXw"/>
+                        <outlet property="usernameField" destination="GxS-Dj-PZc" id="RAA-yD-QgR"/>
                         <segue destination="pDn-1v-Ty2" kind="show" identifier="Login User" id="t7w-xk-hJC"/>
                     </connections>
                 </viewController>
@@ -97,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="165.59999999999999" y="152.47376311844079"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection View Controller-->
         <scene sceneID="tW9-0t-V2d">
             <objects>
-                <viewController id="pDn-1v-Ty2" sceneMemberID="viewController">
+                <viewController id="pDn-1v-Ty2" customClass="SelectionViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qwk-RM-sLX"/>
                         <viewControllerLayoutGuide type="bottom" id="kii-Ks-xWp"/>
@@ -116,6 +117,13 @@
                                     <segue destination="g77-tZ-Bjo" kind="embed" id="Wgd-dM-EKy"/>
                                 </connections>
                             </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="MT2-lY-DEa">
+                                <rect key="frame" x="168" y="630" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -230,7 +238,7 @@
         <scene sceneID="CIK-Cr-PIC">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductListCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C8G-q5-eeL" customClass="ProductListCollectionViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FeO-O8-cP2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FeO-O8-cP2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

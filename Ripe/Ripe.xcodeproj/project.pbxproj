@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		189AD5C91E7519BE00088545 /* SelectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */; };
-		189AD5CB1E752C3100088545 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5CA1E752C3100088545 /* SelectionViewController.swift */; };
+		189AD5C91E7519BE00088545 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		189AD5CB1E752C3100088545 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		189AD5CE1E754BD300088545 /* SelectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5CC1E754BD300088545 /* SelectionPageViewController.swift */; };
+		189AD5CF1E754BD300088545 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5CD1E754BD300088545 /* SelectionViewController.swift */; };
 		34D07BBB1E74A96D00E1ABCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */; };
 		34D07BC01E74A96D00E1ABCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BBE1E74A96D00E1ABCF /* Main.storyboard */; };
 		34D07BC21E74A96D00E1ABCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BC11E74A96D00E1ABCF /* Assets.xcassets */; };
@@ -31,11 +33,10 @@
 		34D07BFE1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */; };
 		34D07BFF1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */; };
 		34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C001E74C29E00E1ABCF /* Extensions.swift */; };
-		34D07C0B1E74EE7B00E1ABCF /* setupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */; };
-		34D07C0C1E74EE7B00E1ABCF /* setupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */; };
 		34D07C111E75112D00E1ABCF /* Produce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C101E75112D00E1ABCF /* Produce.swift */; };
 		34D07C121E75112D00E1ABCF /* Produce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07C101E75112D00E1ABCF /* Produce.swift */; };
 		3F46E653F4D7CCE162E1BA8D /* Pods_Ripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3CAB3C527EA597AC6BFE61 /* Pods_Ripe.framework */; };
+		414C9EB71E7547BE00F50FE8 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C9EB61E7547BE00F50FE8 /* ActionButton.swift */; };
 		87619B98AE3A66DE76E098E3 /* Pods_RipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E136EFD9736442D63BDD394 /* Pods_RipeTests.framework */; };
 		AA253846892A461D7323B720 /* Pods_RipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2645F9B3171B5D5C9606C4 /* Pods_RipeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189AD5CC1E754BD300088545 /* SelectionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionPageViewController.swift; sourceTree = "<group>"; };
+		189AD5CD1E754BD300088545 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		1C2645F9B3171B5D5C9606C4 /* Pods_RipeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RipeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E136EFD9736442D63BDD394 /* Pods_RipeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RipeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionPageViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +86,8 @@
 		34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewCell.swift; sourceTree = "<group>"; };
 		34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		34D07C001E74C29E00E1ABCF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupTextField.swift; sourceTree = "<group>"; };
 		34D07C101E75112D00E1ABCF /* Produce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Produce.swift; path = Classes/Produce.swift; sourceTree = "<group>"; };
+		414C9EB61E7547BE00F50FE8 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		4C3CAB3C527EA597AC6BFE61 /* Pods_Ripe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ripe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1E854F3AA4CE9FAC42D99E /* Pods-RipeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RipeUITests/Pods-RipeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE97179C335D3D83F28C6C02 /* Pods-Ripe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ripe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ripe/Pods-Ripe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,8 +166,7 @@
 			children = (
 				34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */,
 				34D07BBE1E74A96D00E1ABCF /* Main.storyboard */,
-				189AD5CA1E752C3100088545 /* SelectionViewController.swift */,
-				189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */,
+				34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */,
 				34D07C001E74C29E00E1ABCF /* Extensions.swift */,
 				34D07BF11E74AF1E00E1ABCF /* ProductListCollectionViewController.swift */,
 				34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */,
@@ -172,7 +174,8 @@
 				34D07BF41E74AF3700E1ABCF /* CheckoutViewController.swift */,
 				34D07BEE1E74AF0900E1ABCF /* CartTableViewController.swift */,
 				34D07BFD1E74B73E00E1ABCF /* CartTableViewCell.swift */,
-				34D07BEB1E74AEF100E1ABCF /* LoginViewController.swift */,
+				189AD5CC1E754BD300088545 /* SelectionPageViewController.swift */,
+				189AD5CD1E754BD300088545 /* SelectionViewController.swift */,
 				34D07BC11E74A96D00E1ABCF /* Assets.xcassets */,
 				34D07BC31E74A96D00E1ABCF /* LaunchScreen.storyboard */,
 				34D07BC61E74A96D00E1ABCF /* Info.plist */,
@@ -203,7 +206,7 @@
 		34D07C091E74EE5400E1ABCF /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				34D07C0A1E74EE7B00E1ABCF /* setupTextField.swift */,
+				414C9EB61E7547BE00F50FE8 /* ActionButton.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -303,7 +306,7 @@
 				TargetAttributes = {
 					34D07BB61E74A96C00E1ABCF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4626H9HMFC;
+						DevelopmentTeam = GH7595L99J;
 						ProvisioningStyle = Automatic;
 					};
 					34D07BCA1E74A96D00E1ABCF = {
@@ -513,14 +516,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D07BF21E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
-				189AD5CB1E752C3100088545 /* SelectionViewController.swift in Sources */,
-				34D07C0B1E74EE7B00E1ABCF /* setupTextField.swift in Sources */,
-				189AD5C91E7519BE00088545 /* SelectionPageViewController.swift in Sources */,
+				189AD5CB1E752C3100088545 /* (null) in Sources */,
+				189AD5CE1E754BD300088545 /* SelectionPageViewController.swift in Sources */,
+				414C9EB71E7547BE00F50FE8 /* ActionButton.swift in Sources */,
+				189AD5C91E7519BE00088545 /* (null) in Sources */,
 				34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */,
 				34D07BEC1E74AEF100E1ABCF /* LoginViewController.swift in Sources */,
 				34D07BFB1E74B69400E1ABCF /* ProductListCollectionViewCell.swift in Sources */,
 				34D07BFE1E74B73E00E1ABCF /* CartTableViewCell.swift in Sources */,
 				34D07BEF1E74AF0900E1ABCF /* CartTableViewController.swift in Sources */,
+				189AD5CF1E754BD300088545 /* SelectionViewController.swift in Sources */,
 				34D07BF81E74AF4800E1ABCF /* AddToCartViewController.swift in Sources */,
 				34D07BF51E74AF3700E1ABCF /* CheckoutViewController.swift in Sources */,
 				34D07C111E75112D00E1ABCF /* Produce.swift in Sources */,
@@ -533,7 +538,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D07BF31E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
-				34D07C0C1E74EE7B00E1ABCF /* setupTextField.swift in Sources */,
 				34D07BF01E74AF0900E1ABCF /* CartTableViewController.swift in Sources */,
 				34D07BF91E74AF4800E1ABCF /* AddToCartViewController.swift in Sources */,
 				34D07BF61E74AF3700E1ABCF /* CheckoutViewController.swift in Sources */,
@@ -682,8 +686,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE97179C335D3D83F28C6C02 /* Pods-Ripe.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4626H9HMFC;
+				DEVELOPMENT_TEAM = GH7595L99J;
 				INFOPLIST_FILE = Ripe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackvic.Ripe;
@@ -696,8 +701,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB3E70F2F9F8FBA6A7E0186E /* Pods-Ripe.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4626H9HMFC;
+				DEVELOPMENT_TEAM = GH7595L99J;
 				INFOPLIST_FILE = Ripe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackvic.Ripe;
