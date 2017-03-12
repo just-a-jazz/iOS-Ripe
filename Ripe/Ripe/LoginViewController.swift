@@ -21,20 +21,11 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         customizeTextField()
-        customizeUIButton()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func customizeUIButton() {
-        loginButton.backgroundColor = UIColor.orange
-        loginButton.titleLabel?.textColor = UIColor.white
-        loginButton.layer.masksToBounds = true
-        loginButton.layer.cornerRadius = loginButton.frame.height / 2
-        loginButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
     }
     
     func customizeTextField() {
