@@ -10,8 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var UsernameField: UITextField!
-    @IBOutlet weak var PasswordField: UITextField!
+    @IBOutlet weak var UsernameField: textField!
+    @IBOutlet weak var PasswordField: textField!
     
     @IBOutlet weak var LoginButton: UIButton!
     
@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        customizeTextField()
+        customizeUIButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,18 +29,21 @@ class LoginViewController: UIViewController {
     }
     
     func customizeUIButton() {
-        
+        LoginButton.backgroundColor = UIColor.orange
+        LoginButton.titleLabel?.textColor = UIColor.white
+        LoginButton.layer.masksToBounds = true
+        LoginButton.layer.cornerRadius = LoginButton.frame.height / 2
+        LoginButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
     }
     
     func customizeTextField() {
-        UsernameField.backgroundColor = UIColor(colorLiteralRed: 37/255, green: 37/255, blue: 37/255, alpha: 37/255)
-        UsernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        UsernameField.addBottomBorder()
+        UsernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
         UsernameField.autocapitalizationType = UITextAutocapitalizationType.sentences
         UsernameField.returnKeyType = .next
         
-        
-        PasswordField.backgroundColor = UIColor(colorLiteralRed: 37/255, green: 37/255, blue: 37/255, alpha: 37/255)
-        PasswordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        PasswordField.addBottomBorder()
+        PasswordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
         PasswordField.autocapitalizationType = UITextAutocapitalizationType.none
         PasswordField.returnKeyType = .done
     }

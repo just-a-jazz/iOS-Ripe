@@ -9,18 +9,24 @@
 import Foundation
 import UIKit
 
-class setupTextField: UITextField {
+class textField: UITextField {
 
-    /*
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
-    }
-    */
- 
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        self.layer.borderWidth = 1
+        super.draw(rect)
+        //self.layer.borderWidth = 1
+        
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.white.cgColor
+        
+        self.layer.masksToBounds = false
+        
+        self.layer.shadowColor = UIColor.orange.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
     }
 }

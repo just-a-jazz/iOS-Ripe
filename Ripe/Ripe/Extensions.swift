@@ -19,3 +19,13 @@ extension UIImageView {
         self.layer.addSublayer(gradient)
     }
 }
+
+extension UITextField {
+    func addBottomBorder() {
+        var bottomLine = CALayer()
+        bottomLine.frame = CGRect(x:0.0, y:self.frame.height - 1, width:self.frame.width, height:2.0)
+        bottomLine.backgroundColor = UIColor.orange.cgColor
+        self.borderStyle = UITextBorderStyle.none
+        self.layer.addSublayer(bottomLine)
+    }
+}
