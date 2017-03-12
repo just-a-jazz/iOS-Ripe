@@ -13,6 +13,8 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var CartTableView: UITableView!
     @IBOutlet weak var CheckoutButton: UIButton!
     
+    var food = ["Mango", "Apples", "Bananas", "Pineapples"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +31,6 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        customizeUIButton()
-    }
-    
-    
-    func customizeUIButton() {
-        CheckoutButton.backgroundColor = UIColor.orange
-        CheckoutButton.tintColor = UIColor.white
-        CheckoutButton.layer.masksToBounds = true
-        CheckoutButton.layer.cornerRadius = CheckoutButton.frame.height / 2
-        CheckoutButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,9 +16,9 @@ class ActionButton: UIButton {
         
         backgroundColor = primaryColor
         titleLabel?.textColor = .white
+        tintColor = UIColor.white
         
         layer.masksToBounds = true
         layer.cornerRadius = frame.height / 2
-        contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
     }
 }
