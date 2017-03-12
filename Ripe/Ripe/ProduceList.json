@@ -5,41 +5,6 @@
         "image": "carrotsLight",
         "isWeighted": true
     },
-    "mangoes": {
-        "name": "Mangoes",
-        "image": "mangoes",
-        "cover": "mangoes",
-        "children": {
-            "haden": {
-                "name": "Haden",
-                "price": 1.40,
-                "image": "hadenMango",
-                "isWeighted": true,
-                "category": "mangoes"
-            },
-            "keitt": {
-                "name": "Keitt",
-                "price": 1.40,
-                "image": "keittMango",
-                "isWeighted": true,
-                "category": "mangoes"
-            },
-            "palmer": {
-                "name": "Palmer",
-                "price": 1.40,
-                "image": "palmerMango",
-                "isWeighted": true,
-                "category": "mangoes"
-            },
-            "kent": {
-                "name": "Kent",
-                "price": 1.40,
-                "image": "kentMango",
-                "isWeighted": true,
-                "category": "mangoes"
-            }
-        }
-    },
     "durian": {
         "name": "Durian",
         "price": 4.00,
