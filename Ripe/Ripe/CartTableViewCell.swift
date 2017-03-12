@@ -10,6 +10,12 @@ import UIKit
 
 class CartTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var produceImageView: UIImageView!
+    @IBOutlet weak var produceNameLabel: UILabel!
+    @IBOutlet weak var produceAmountLabel: UILabel!
+    @IBOutlet weak var produceDollarLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

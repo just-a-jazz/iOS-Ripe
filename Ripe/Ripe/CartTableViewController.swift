@@ -20,11 +20,27 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         CartTableView.delegate = self
         CartTableView.dataSource = self
         
+        //navigationController?.navigationBar.tintColor = UIColor.blue
+        //navigationController?.navigationBar.backgroundColor = UIColor.orange
+        self.title = "Cart"
+        
+
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        customizeUIButton()
+    }
+    
+    
+    func customizeUIButton() {
+        CheckoutButton.backgroundColor = UIColor.orange
+        CheckoutButton.tintColor = UIColor.white
+        CheckoutButton.layer.masksToBounds = true
+        CheckoutButton.layer.cornerRadius = CheckoutButton.frame.height / 2
+        CheckoutButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 5, 0)
     }
 
     override func didReceiveMemoryWarning() {
