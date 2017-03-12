@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,9 +54,6 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mO-sX-W6j"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-fF-xJb">
                                 <rect key="frame" x="133" y="273" width="109" height="67"/>
@@ -88,8 +85,9 @@
                     </view>
                     <connections>
                         <outlet property="LoginButton" destination="U3X-3x-OnP" id="nQI-MK-W3S"/>
-                        <outlet property="PasswordField" destination="wa9-s8-f3v" id="ksA-N6-SWw"/>
-                        <outlet property="UsernameField" destination="GxS-Dj-PZc" id="4iv-zS-cdX"/>
+                        <outlet property="loginButton" destination="U3X-3x-OnP" id="Hsv-a4-i6f"/>
+                        <outlet property="passwordField" destination="wa9-s8-f3v" id="BwI-xJ-wXw"/>
+                        <outlet property="usernameField" destination="GxS-Dj-PZc" id="RAA-yD-QgR"/>
                         <segue destination="pDn-1v-Ty2" kind="show" identifier="Login User" id="t7w-xk-hJC"/>
                     </connections>
                 </viewController>
@@ -171,7 +169,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tR4-rs-tvR" id="Efm-fn-7v9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHF-5l-y92">
@@ -237,7 +235,7 @@
         <scene sceneID="CIK-Cr-PIC">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductListCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C8G-q5-eeL" customClass="ProductListCollectionViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FeO-O8-cP2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FeO-O8-cP2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -19,9 +19,7 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         CartTableView.delegate = self
         CartTableView.dataSource = self
-        
-        //navigationController?.navigationBar.tintColor = UIColor.blue
-        //navigationController?.navigationBar.backgroundColor = UIColor.orange
+
         self.title = "Cart"
         
 

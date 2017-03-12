@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class CheckoutViewController: UIViewController {
 
@@ -21,6 +24,20 @@ class CheckoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func hi()->Int {
+        Alamofire.request(
+            URL(string: "http://httpbin.org/get")!,
+            method: .get,
+            parameters: ["include_docs": "true"])
+            .validate()
+//            .responseJSON { (response) -> Void in
+//                guard response.result.isSuccess else {
+//                    print("Error while fetching remote rooms: \(response.result.error)")
+//                    completion(nil)
+//                    return
+//                }
+        return 1
+    }
 
     /*
     // MARK: - Navigation
