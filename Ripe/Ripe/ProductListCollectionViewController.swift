@@ -19,8 +19,6 @@ class ProductListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         loadData()
-        
-        
     }
     
     func loadData() {
@@ -131,7 +129,7 @@ class ProductListCollectionViewController: UICollectionViewController {
         produce.name = item["name"].stringValue
         produce.image = item["image"].stringValue
         
-        if let cover = item["cover"].stringValue as? String {
+        if let cover = item["cover"].stringValue as String {
             produce.cover = cover
         }
         
