@@ -1,6 +1,4 @@
-# Ripe
-
-![logo](Designs/logo.png)
+![logo](Designs/logo.png) Ripe
 
 ## Overview
 
