@@ -1,160 +1,120 @@
 {
-    "produce": [
-        {
-              "carrot": {
-                    "name": "Carrots",
-                    "price": 1.50,
-                    "image": "<carrotsImageHere>",
-                    "isWeighted": true
-              }
-        },
-        {
-              "haden": {
-                    "name": "Haden",
-                    "price": 1.40,
-                    "image": "<hadenManagoImageHere>",
-                    "isWeighted": true,
-                    "category": "mango"
-              }
-        },
-        {
-              "keitt": {
-                    "name": "Keitt",
-                    "price": 1.40,
-                    "image": "<keittManagoImageHere>",
-                    "isWeighted": true,
-                    "category": "mango"
-              }
-        },
-        {
-              "palmer": {
-                    "name": "Palmer",
-                    "price": 1.40,
-                    "image": "<palmerManagoImageHere>",
-                    "isWeighted": true,
-                    "category": "mango"
-              }
-        },
-        {
-              "kent": {
-                    "name": "Kent",
-                    "price": 1.40,
-                    "image": "<kentManagoImageHere>",
-                    "isWeighted": true,
-                    "category": "mango"
-              }
-        },
-        {
-              "durian": {
-                    "name": "Durian",
-                    "price": 4.00,
-                    "image": "<durianImageHere>",
-                    "isWeighted": false
-              }
-        },
-        {
-              "eggfruit": {
-                    "name": "Eggfruit",
-                    "price": 3.40,
-                    "image": "<eggfruitImageHere>",
-                    "isWeighted": true
-              }
-        },
-        {
-              "guava": {
-                    "name": "Guava",
-                    "price": 2.00,
-                    "image": "<guavaImageHere>",
-                    "isWeighted": true
-              }
-        },
-        {
-              "jackfruit": {
-                    "name": "Jackfruit",
-                    "price": 4.00,
-                    "image": "<guavaImageHere>",
-                    "isWeighted": false 
-              }
-        },
-        {
-              "loquat": {
-                    "name": "Loquat",
-                    "price": 1.30,
-                    "image": "<loquatImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "mangosteen": {
-                    "name": "Mangosteen",
-                    "price": 2.50,
-                    "image": "<loquatImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "marang": {
-                    "name": "Marang",
-                    "price": 2.00,
-                    "image": "<marangImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "monstera": {
-                    "name": "Monstera",
-                    "price": 0.90,
-                    "image": "<monsteraImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "pawpaw": {
-                    "name": "Pawpaw",
-                    "price": 2.00,
-                    "image": "<pawpawImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "pineapple": {
-                    "name": "Pineapple",
-                    "price": 4.00,
-                    "image": "<loquatImageHere>",
-                    "isWeighted": false 
-              }
-        },
-        {
-              "pitahaya": {
-                    "name": "Pitahaya",
-                    "price": 3.00,
-                    "image": "<pitahayaImageHere>",
-                    "isWeighted": false 
-              }
-        },
-        {
-              "pomegranate": {
-                    "name": "Pomegranate",
-                    "price": 2.50,
-                    "image": "<pomegranateImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "sapota": {
-                    "name": "Sapota",
-                    "price": 2.00,
-                    "image": "<sapotaImageHere>",
-                    "isWeighted": true 
-              }
-        },
-        {
-              "starfruit": {
-                    "name": "Starfruit",
-                    "price": 1.40,
-                    "image": "<starfruitImageHere>",
-                    "isWeighted": true 
-              }
-        }
-    ]
+    "carrot": {
+        "name": "Carrots",
+        "price": 1.50,
+        "image": "<carrotsImageHere>",
+        "isWeighted": true
+    },
+    "haden": {
+        "name": "Haden",
+        "price": 1.40,
+        "image": "<hadenManagoImageHere>",
+        "isWeighted": true,
+        "category": "mango"
+    },
+    "keitt": {
+        "name": "Keitt",
+        "price": 1.40,
+        "image": "<keittManagoImageHere>",
+        "isWeighted": true,
+        "category": "mango"
+    },
+    "palmer": {
+        "name": "Palmer",
+        "price": 1.40,
+        "image": "<palmerManagoImageHere>",
+        "isWeighted": true,
+        "category": "mango"
+    },
+    "kent": {
+        "name": "Kent",
+        "price": 1.40,
+        "image": "<kentManagoImageHere>",
+        "isWeighted": true,
+        "category": "mango"
+    },
+    "durian": {
+        "name": "Durian",
+        "price": 4.00,
+        "image": "<durianImageHere>",
+        "isWeighted": false
+    },
+    "eggfruit": {
+        "name": "Eggfruit",
+        "price": 3.40,
+        "image": "<eggfruitImageHere>",
+        "isWeighted": true
+    },
+    "guava": {
+        "name": "Guava",
+        "price": 2.00,
+        "image": "<guavaImageHere>",
+        "isWeighted": true
+    },
+    "jackfruit": {
+        "name": "Jackfruit",
+        "price": 4.00,
+        "image": "<guavaImageHere>",
+        "isWeighted": false
+    },
+    "loquat": {
+        "name": "Loquat",
+        "price": 1.30,
+        "image": "<loquatImageHere>",
+        "isWeighted": true
+    },
+    "mangosteen": {
+        "name": "Mangosteen",
+        "price": 2.50,
+        "image": "<loquatImageHere>",
+        "isWeighted": true
+    },
+    "marang": {
+        "name": "Marang",
+        "price": 2.00,
+        "image": "<marangImageHere>",
+        "isWeighted": true 
+    },
+    "monstera": {
+        "name": "Monstera",
+        "price": 0.90,
+        "image": "<monsteraImageHere>",
+        "isWeighted": true 
+    },
+    "pawpaw": {
+        "name": "Pawpaw",
+        "price": 2.00,
+        "image": "<pawpawImageHere>",
+        "isWeighted": true 
+    },
+    "pineapple": {
+        "name": "Pineapple",
+        "price": 4.00,
+        "image": "<loquatImageHere>",
+        "isWeighted": false
+    },
+    "pitahaya": {
+        "name": "Pitahaya",
+        "price": 3.00,
+        "image": "<pitahayaImageHere>",
+        "isWeighted": false
+    },
+    "pomegranate": {
+        "name": "Pomegranate",
+        "price": 2.50,
+        "image": "<pomegranateImageHere>",
+        "isWeighted": true
+    },
+    "sapota": {
+        "name": "Sapota",
+        "price": 2.00,
+        "image": "<sapotaImageHere>",
+        "isWeighted": true
+    },
+    "starfruit": {
+        "name": "Starfruit",
+        "price": 1.40,
+        "image": "<starfruitImageHere>",
+        "isWeighted": true
+    }
 }

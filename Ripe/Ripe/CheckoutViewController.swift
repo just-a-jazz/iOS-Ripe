@@ -25,17 +25,26 @@ class CheckoutViewController: UIViewController {
     }
     
     func hi()->Int {
+        
+        /*
         Alamofire.request(
             URL(string: "http://httpbin.org/get")!,
             method: .get,
             parameters: ["include_docs": "true"])
             .validate()
-//            .responseJSON { (response) -> Void in
-//                guard response.result.isSuccess else {
-//                    print("Error while fetching remote rooms: \(response.result.error)")
-//                    completion(nil)
-//                    return
-//                }
+            .responseJSON { (response) -> Void in
+                guard response.result.isSuccess else {
+                    print("Error while fetching remote rooms: \(response.result.error)")
+                    //completion(nil)
+                    return
+                }
+                
+                print("Hello!")
+                
+                print(response)
+        }
+         */
+        
         return 1
     }
 
