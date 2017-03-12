@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "ProductChildListItem"
 
 
-class ChildItemViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class SubViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!
@@ -19,6 +19,8 @@ class ChildItemViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var recognizeImageButton: ActionButton!
     
     var products: [Produce]!
+    var predictLabel: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,19 @@ class ChildItemViewController: UIViewController, UICollectionViewDataSource, UIC
      }
      */
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // get taken picture as UIImage
+        let uiImg = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        let network = Network()
+        
+        predictLabel = network.getPrediction(image: uiImg)
+        
+        dismiss(animated: true, completion: ({
+            self.performSegue(withIdentifier: "Add Cart Item", sender: self)
+        }))
+    }
+    
     // Uncomment this method to specify if the specified item should be selected
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
@@ -86,7 +101,14 @@ class ChildItemViewController: UIViewController, UICollectionViewDataSource, UIC
      */
 
     @IBAction func recognizeImage(_ sender: UIButton) {
+        let picker = UIImagePickerController()
         
+        // set the picker to camera so the user can take an image
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.camera
+        
+        // call the camera
+        present(picker, animated: true, completion: nil)
     }
 
     /*

@@ -9,13 +9,9 @@
 import UIKit
 
 class AddToCartViewController: UIViewController {
-
     @IBOutlet weak var AddItembutton: UIButton!
-    
     @IBOutlet weak var productImageView: UIImageView!
-    
     @IBOutlet weak var productNameLabel: UILabel!
-    
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var priceLabel: UILabel!
     
