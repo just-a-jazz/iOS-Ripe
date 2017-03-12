@@ -52,20 +52,6 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
      }
      */
     
-    
-    
-    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        // get taken picture as UIImage
-        let uiImg = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        let network = Network()
-        
-        dismiss(animated: true, completion: ({
-            self.performSegue(withIdentifier: "Add Cart Item", sender: self)
-        }))
-    }*/
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // get taken picture as UIImage
         let uiImg = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -94,7 +80,11 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductListCollectionViewCell
         
+        let produce = products[indexPath.row]
+        
         // Configure the cell
+        cell.ProduceImage.image = UIImage(named: produce.image)
+        cell.ProduceLabel.text = produce.name
         
         return cell
     }
