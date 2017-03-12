@@ -14,8 +14,8 @@ class SelectionPageViewController: UIPageViewController {
     
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
-        return [self.newColoredViewController("CartTableViewController"),
-                self.newColoredViewController("ProductListCollectionViewController")]
+        return [self.newColoredViewController("CartTableNavigation"),
+                self.newColoredViewController("ProductListNavigation")]
     }()
     
     override func viewDidLoad() {

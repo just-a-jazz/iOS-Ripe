@@ -236,13 +236,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSZ-Ek-iCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3055" y="181"/>
+            <point key="canvasLocation" x="3992.8000000000002" y="180.35982008995504"/>
         </scene>
         <!--Product List Collection View Controller-->
         <scene sceneID="CIK-Cr-PIC">
             <objects>
                 <collectionViewController storyboardIdentifier="ProductListCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C8G-q5-eeL" customClass="ProductListCollectionViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FeO-O8-cP2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="FeO-O8-cP2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -284,7 +284,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QrX-Aj-OXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3866" y="180"/>
+            <point key="canvasLocation" x="5743.1999999999998" y="179.46026986506749"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ds1-1G-xu4">
@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aff-aI-iVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4774" y="152"/>
+            <point key="canvasLocation" x="6652" y="151.57421289355324"/>
         </scene>
         <!--Add To Cart View Controller-->
         <scene sceneID="7M6-7r-XRZ">
@@ -441,12 +441,48 @@
             </objects>
             <point key="canvasLocation" x="966" y="1039"/>
         </scene>
+        <!--Cart Table Navigation-->
+        <scene sceneID="Hn0-Wq-kS2">
+            <objects>
+                <navigationController storyboardIdentifier="CartTableNavigation" automaticallyAdjustsScrollViewInsets="NO" id="F7y-cW-hw2" customClass="CartTableNavigation" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bhV-o9-0Ef">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l6h-Au-Fnm" kind="relationship" relationship="rootViewController" id="w3g-jv-Mgb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbF-2k-IzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3053.5999999999999" y="180.35982008995504"/>
+        </scene>
+        <!--Product List Navigation-->
+        <scene sceneID="5MM-uM-0gj">
+            <objects>
+                <navigationController storyboardIdentifier="ProductListNavigation" automaticallyAdjustsScrollViewInsets="NO" id="Ogr-CR-NyN" customClass="ProductListNavigation" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qo7-8P-AmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C8G-q5-eeL" kind="relationship" relationship="rootViewController" id="RyD-QF-Q53"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Knb-f5-VaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4804" y="179.46026986506749"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Fruit Background" width="375" height="667"/>
         <image name="Pineapple Icon" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fgr-NN-MjE"/>
+        <segue reference="PJ4-p8-i6L"/>
     </inferredMetricsTieBreakers>
 </document>
