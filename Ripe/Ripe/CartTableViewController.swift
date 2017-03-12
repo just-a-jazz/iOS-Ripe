@@ -57,6 +57,8 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartItemIdentifier", for: indexPath) as! CartTableViewCell
         
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
+        
         // Cell Properties
         cell.produceImageView.image = foodImage[indexPath.row] as UIImage
         cell.produceNameLabel.text = "\(foodName[indexPath.row])"
@@ -66,6 +68,8 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Cell appearance
         cell.produceImageView.layer.masksToBounds = true
         cell.produceImageView.layer.cornerRadius = cell.produceImageView.frame.height / 2
+        cell.produceImageView.layer.borderWidth = 2
+        cell.produceImageView.layer.borderColor = primaryColor.cgColor
         
         return cell
     }
