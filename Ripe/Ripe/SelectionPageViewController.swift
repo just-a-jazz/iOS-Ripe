@@ -10,37 +10,69 @@ import UIKit
 
 class SelectionPageViewController: UIPageViewController {
     
-   var selectionDelegate: SelectionPageViewControllerDelegate?
+    weak var selectionDelegate: SelectionPageViewControllerDelegate?
+    
+    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
+        return [self.newSelectedViewController("CartTableNavigation"),
+                self.newSelectedViewController("ProductListNavigation")]
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataSource = self
+        delegate = self
         
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
+        if let initialViewController = orderedViewControllers.first {
+            scrollToViewController(initialViewController)
         }
-        selectionDelegate?.selectionPageViewController(selectionPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+        
+        selectionDelegate?.selectionPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
+    }
+
+    func scrollToNextViewController() {
+        if let visibleViewController = viewControllers?.first,
+            let nextViewController = pageViewController(self, viewControllerAfter: visibleViewController) {
+                scrollToViewController(nextViewController)
+        }
     }
     
-    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newSelectionViewController("CartTableViewController"),
-                self.newSelectionViewController("ProductListCollectionViewController")]
-    }()
+    func scrollToViewController(index newIndex: Int) {
+        if let firstViewController = viewControllers?.first,
+            let currentIndex = orderedViewControllers.index(of: firstViewController) {
+                let direction: UIPageViewControllerNavigationDirection = newIndex >= currentIndex ? .forward : .reverse
+                let nextViewController = orderedViewControllers[newIndex]
+                scrollToViewController(nextViewController, direction: direction)
+        }
+    }
     
-    fileprivate func newSelectionViewController(_ name: String) -> UIViewController {
+    fileprivate func newSelectedViewController(_ name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: "\(name)")
     }
+    
+
+    fileprivate func scrollToViewController(_ viewController: UIViewController, direction: UIPageViewControllerNavigationDirection = .forward) {
+        setViewControllers([viewController], direction: direction, animated: true, completion: { (finished) -> Void in
+            self.notifySelectionDelegateOfNewIndex()
+        })
+    }
+    
+
+    fileprivate func notifySelectionDelegateOfNewIndex() {
+        if let firstViewController = viewControllers?.first,
+            let index = orderedViewControllers.index(of: firstViewController) {
+                selectionDelegate?.selectionPageViewController(self, didUpdatePageIndex: index)
+        }
+    }
+    
 }
+
+// MARK: UIPageViewControllerDataSource
 
 extension SelectionPageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
@@ -58,8 +90,7 @@ extension SelectionPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
@@ -77,26 +108,23 @@ extension SelectionPageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+    
+}
+
+extension SelectionPageViewController: UIPageViewControllerDelegate {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        notifySelectionDelegateOfNewIndex()
+    }
+    
 }
 
 protocol SelectionPageViewControllerDelegate: class {
     
-    /**
-     Called when the number of pages is updated.
-     
-     - parameter tutorialPageViewController: the TutorialPageViewController instance
-     - parameter count: the total number of pages.
-     */
-    func selectionPageViewController(selectionPageViewController: SelectionPageViewController,
-                                    didUpdatePageCount count: Int)
+    func selectionPageViewController(_ selectionPageViewController: SelectionPageViewController, didUpdatePageCount count: Int)
     
-    /**
-     Called when the current index is updated.
-     
-     - parameter tutorialPageViewController: the TutorialPageViewController instance
-     - parameter index: the index of the currently visible page.
-     */
-    func selectionPageViewController(selectionPageViewController: SelectionPageViewController,
-                                    didUpdatePageIndex index: Int)
+    func selectionPageViewController(_ selectionPageViewController: SelectionPageViewController, didUpdatePageIndex index: Int)
     
 }
+
+

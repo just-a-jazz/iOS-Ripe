@@ -10,17 +10,20 @@ import UIKit
 
 class CartTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var CartTableView: UITableView!
-    @IBOutlet weak var CheckoutButton: UIButton!
+    @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var checkoutButton: UIButton!
     
-    var food = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodImage = [#imageLiteral(resourceName: "sapota"), #imageLiteral(resourceName: "starfruit"), #imageLiteral(resourceName: "pomegranate"), #imageLiteral(resourceName: "jackfruit")]
+    var foodName = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodAmount = [2, 5.2, 12, 4]
+    var foodDollar = [4.32, 23, 23, 12]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CartTableView.delegate = self
-        CartTableView.dataSource = self
+        initializeTableView()
+        
 
         self.title = "Cart"
         
@@ -32,6 +35,15 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func initializeTableView() {
+        // Set up delegates
+        cartTableView.delegate = self
+        cartTableView.dataSource = self
+        
+        // Set up appearance
+        cartTableView.tableFooterView = UIView()
+    }
 
     // MARK: - Table view data 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,29 +51,25 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return food.count
+        return foodName.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartItemIdentifier", for: indexPath) as! CartTableViewCell
         
-        // MARK: - Cell Properties
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
         
-        /*cell.track = (tracksList[indexPath.row])
-        cell.trackName.text = tracksList[indexPath.row].name
-        cell.artistName.text = tracksList[indexPath.row].artist
+        // Cell Properties
+        cell.produceImageView.image = foodImage[indexPath.row] as UIImage
+        cell.produceNameLabel.text = "\(foodName[indexPath.row])"
+        cell.produceAmountLabel.text = "\(String(foodAmount[indexPath.row]))"
+        cell.produceDollarLabel.text = "\(foodDollar[indexPath.row])"
         
-        if let unwrappedArtwork = tracksList[indexPath.row].artwork {
-            cell.artworkImageView.image = unwrappedArtwork
-        }
-        
-        // MARK: - Cell Selection
-        
-        if (tracksQueue(hasTrack: (tracksList[indexPath.row]))) {
-            cell.addButton.setTitle("✓", for: .normal)
-        } else {
-            cell.addButton.setTitle("+", for: .normal)
-        }*/
+        // Cell appearance
+        cell.produceImageView.layer.masksToBounds = true
+        cell.produceImageView.layer.cornerRadius = cell.produceImageView.frame.height / 2
+        cell.produceImageView.layer.borderWidth = 2
+        cell.produceImageView.layer.borderColor = primaryColor.cgColor
         
         return cell
     }
