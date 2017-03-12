@@ -23,11 +23,15 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+        setupCollectionView()
+        loadData()
+    }
+    
+    func setupCollectionView() {
         productListCollectionView.delegate = self
         productListCollectionView.dataSource = self
-        
-        loadData()
+        productListCollectionView.contentInset = UIEdgeInsetsMake(-60, 0, 0, 0)
     }
     
     func loadData() {
@@ -87,6 +91,15 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         // Configure the cell
         cell.ProduceImage.image = UIImage(named: produce.image)
         cell.ProduceLabel.text = produce.name
+        
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
+        
+        // Change produce image
+        cell.ProduceImage.layer.masksToBounds = true
+        cell.ProduceImage.layer.cornerRadius = cell.ProduceImage.layer.frame.height / 2
+        cell.ProduceImage.layer.borderWidth = 2
+        cell.ProduceImage.layer.borderColor = primaryColor.cgColor
+        
         
         return cell
     }
@@ -163,8 +176,25 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         }
         
         if let destination = segue.destination as? AddToCartViewController {
+            if selected == -1 {
+                selected = findSelected()
+            }
+            
+            destination.priceToLoad = products[selected].price
+            destination.imageToLoad = UIImage(named: products[selected].image)
             destination.nameToLoad = self.predictLabel!
         }
+    }
+    
+    func findSelected() -> Int {
+        
+        for i in 0..<products.count {
+            print(predictLabel)
+            if predictLabel == products[i].name.lowercased() {
+                return i
+            }
+        }
+        return Int(arc4random_uniform(UInt32(products.count)))
     }
     
     

@@ -67,6 +67,7 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Cell appearance
         cell.produceImageView.layer.masksToBounds = true
         cell.produceImageView.layer.cornerRadius = cell.produceImageView.frame.height / 2
+        print(cell.produceImageView.frame.height / 2)
         cell.produceImageView.layer.borderWidth = 2
         cell.produceImageView.layer.borderColor = primaryColor.cgColor
         

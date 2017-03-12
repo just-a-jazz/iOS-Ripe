@@ -25,6 +25,7 @@ class AddToCartViewController: UIViewController {
         super.viewDidLoad()
         
         customizeTextField()
+        populateFields()
         loadImage()
     }
     
@@ -35,10 +36,19 @@ class AddToCartViewController: UIViewController {
         weightTextField.returnKeyType = .done
     }
     
+    func populateFields() {
+        
+    }
+    
     func loadImage() {
-        productImageView.image = imageToLoad!
-        productNameLabel.text = nameToLoad!
-        priceLabel.text = "$\(priceToLoad!)"
+        productNameLabel.text = nameToLoad!.capitalized
+        if let image = imageToLoad {
+            productImageView.image = image
+        }
+        
+        if let text = priceToLoad {
+            priceLabel.text = "$\(text)"
+        }
     }
     
     
