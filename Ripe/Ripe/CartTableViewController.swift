@@ -13,7 +13,10 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var CartTableView: UITableView!
     @IBOutlet weak var CheckoutButton: UIButton!
     
-    var food = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodImage = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodName = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodAmount = [2, 5.2, 12, 4]
+    var foodDollar = [4.32, 23, 23, 12]
     
     
     override func viewDidLoad() {
@@ -39,29 +42,17 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return food.count
+        return foodName.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartItemIdentifier", for: indexPath) as! CartTableViewCell
         
-        // MARK: - Cell Properties
-        
-        /*cell.track = (tracksList[indexPath.row])
-        cell.trackName.text = tracksList[indexPath.row].name
-        cell.artistName.text = tracksList[indexPath.row].artist
-        
-        if let unwrappedArtwork = tracksList[indexPath.row].artwork {
-            cell.artworkImageView.image = unwrappedArtwork
-        }
-        
-        // MARK: - Cell Selection
-        
-        if (tracksQueue(hasTrack: (tracksList[indexPath.row]))) {
-            cell.addButton.setTitle("✓", for: .normal)
-        } else {
-            cell.addButton.setTitle("+", for: .normal)
-        }*/
+        // Cell Properties
+        cell.produceImageView.image = foodImage[indexPath.row] as UIImage
+        cell.produceNameLabel.text = "\(foodName[indexPath.row])"
+        cell.produceAmountLabel.text = "\(String(foodAmount[indexPath.row]))"
+        cell.produceDollarLabel.text = "\(foodDollar[indexPath.row])"
         
         return cell
     }
