@@ -2,7 +2,7 @@
 ## Overview
 
 ### Summary
-This project was developed within **24 hours** for [HackUVic2017](http://17w.hackuvic.com/).
+This iOS application was developed within **24 hours** for [HackUVic2017](http://17w.hackuvic.com/).
 
 Ripe is a smart, all-in-one POS solution for small grocers. The Ripe iOS app combines an intuitive item select menu, support for Bluetooth barcode scanning, image recognition and Square checkout to provide a quick and simple checkout experience.
 
@@ -14,17 +14,17 @@ The app, Ripe, allows a cashier to quickly build the customers order and take pa
 ## Technologies
 
 ### Neural Net
-We used a neural network for the image recognition portion of the app.
+We used a neural network for the image recognition portion of the app. 
 
 ### Swift Classes
 * **LoginViewController**: Handles user authentication and landing page for app
 * **ProductListNavigation**: Holds header and displays ProductListCollectionViewController
 * **CartTableNavigation**: Holds header and displays CartTableViewController
 * **CartTableViewController**: Shopping cart for selected items to buy
-* **CartTableViewCell**: <not sure>
-* **ChildrenItemViewController**: <not sure>
+* **CartTableViewCell**: Item object with name, image, weight, and price
+* **SubViewController**: Displays sub-categories for a chosen cagetory
 * **ProductListCollectionViewController**: Categories for produce items
-* **ProductListCollectionViewCell**: <not sure>
+* **ProductListCollectionViewCell**: Category object with name and image
 * **AddToCartViewController**: Modify weight or quantity of produce item
 * **CheckoutViewController**: Handles user payment and generates a receipt
 * **SelectionViewController**: Handles shared UI elements between ProductListNavigation and CartTableNavigation
@@ -33,14 +33,14 @@ We used a neural network for the image recognition portion of the app.
 ## What's Next
 * Train neural net on large range of fruits, vegetables, etc
 * Add support for barcode scanning via camera
-* Provide shopping cart review screen after tapping 'checkout'
+* Provide Square integration after tapping 'checkout'
 * Add support for Bluetooth scale
 
 ## Contributors & Past Experience
-Ali Siddiqui:
+Ali Siddiqui: Moderate experience with Swift 3.0 and Machine Learning.
 
-Matthew Paletta:
+Matthew Paletta: Moderate experience with Swift 3.0 and Machine Learning.
 
-William Grosset: Some experience with Swift 2.0
+William Grosset: Minimal experience with Swift 2.0.
 
-Jordan McKinney: Some experience with Machine Learning
+Jordan McKinney: Some experience with Machine Learning.
