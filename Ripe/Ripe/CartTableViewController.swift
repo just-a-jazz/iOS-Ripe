@@ -13,7 +13,7 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var CartTableView: UITableView!
     @IBOutlet weak var CheckoutButton: UIButton!
     
-    var foodImage = ["Mango", "Apples", "Bananas", "Pineapples"]
+    var foodImage = [#imageLiteral(resourceName: "sapota"), #imageLiteral(resourceName: "starfruit"), #imageLiteral(resourceName: "pomegranate"), #imageLiteral(resourceName: "jackfruit")]
     var foodName = ["Mango", "Apples", "Bananas", "Pineapples"]
     var foodAmount = [2, 5.2, 12, 4]
     var foodDollar = [4.32, 23, 23, 12]
@@ -53,6 +53,10 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.produceNameLabel.text = "\(foodName[indexPath.row])"
         cell.produceAmountLabel.text = "\(String(foodAmount[indexPath.row]))"
         cell.produceDollarLabel.text = "\(foodDollar[indexPath.row])"
+        
+        // Cell appearance
+        cell.produceImageView.layer.masksToBounds = true
+        cell.produceImageView.layer.cornerRadius = cell.produceImageView.frame.height / 2
         
         return cell
     }
