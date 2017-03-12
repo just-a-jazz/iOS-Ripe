@@ -14,7 +14,7 @@ The Ripe app allows a cashier to quickly build the customers order and take paym
 
 The Ripe app integrates with the Square merchant API for fast and secure payment processing.
 
-## Tech
+## Technologies
 
 ### Neural Net
 We used a neural network for the image recognition portion of the app.
