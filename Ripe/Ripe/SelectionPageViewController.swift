@@ -10,7 +10,7 @@ import UIKit
 
 class SelectionPageViewController: UIPageViewController {
     
-    @IBOutlet weak var containerView: UIView!
+   var selectionDelegate: SelectionPageViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +23,19 @@ class SelectionPageViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+        selectionDelegate?.selectionPageViewController(selectionPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
     }
     
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newSelectionViewController("CartTable"),
-                self.newSelectionViewController("ProductListCollection")]
+        return [self.newSelectionViewController("CartTableViewController"),
+                self.newSelectionViewController("ProductListCollectionViewController")]
     }()
     
     fileprivate func newSelectionViewController(_ name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(name)ViewController")
+            instantiateViewController(withIdentifier: "\(name)")
     }
 }
-
-// MARK: UIPageViewControllerDataSource
 
 extension SelectionPageViewController: UIPageViewControllerDataSource {
     
@@ -78,4 +77,26 @@ extension SelectionPageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+}
+
+protocol SelectionPageViewControllerDelegate: class {
+    
+    /**
+     Called when the number of pages is updated.
+     
+     - parameter tutorialPageViewController: the TutorialPageViewController instance
+     - parameter count: the total number of pages.
+     */
+    func selectionPageViewController(selectionPageViewController: SelectionPageViewController,
+                                    didUpdatePageCount count: Int)
+    
+    /**
+     Called when the current index is updated.
+     
+     - parameter tutorialPageViewController: the TutorialPageViewController instance
+     - parameter index: the index of the currently visible page.
+     */
+    func selectionPageViewController(selectionPageViewController: SelectionPageViewController,
+                                    didUpdatePageIndex index: Int)
+    
 }
