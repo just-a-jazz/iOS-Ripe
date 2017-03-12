@@ -1,6 +1,6 @@
 # Ripe
 
-<LOGO HERE>
+![logo](https://github.com/alisidd/HackUVic2017/Designs/Pineapple\ Icon.png)
 
 ## Overview
 
