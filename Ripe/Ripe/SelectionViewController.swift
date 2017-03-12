@@ -31,10 +31,6 @@ class SelectionViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapNextButton(_ sender: UIButton) {
-        selectionPageViewController?.scrollToNextViewController()
-    }
-    
     func didChangePageControlValue() {
         selectionPageViewController?.scrollToViewController(index: pageControl.currentPage)
     }

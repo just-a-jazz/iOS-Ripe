@@ -20,5 +20,12 @@ class ActionButton: UIButton {
         
         layer.masksToBounds = true
         layer.cornerRadius = frame.height / 2
+        // Shadow and Radius
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.5)
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 0.0
+        layer.masksToBounds = false
+        //globeButton.layer.cornerRadius = 4.0
     }
 }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxS-Dj-PZc">
-                                <rect key="frame" x="88" y="347" width="200" height="50"/>
+                                <rect key="frame" x="88" y="353" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6jM-mc-X7o"/>
                                     <constraint firstAttribute="width" constant="200" id="c2A-sc-yaU"/>
@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-s8-f3v">
-                                <rect key="frame" x="87" y="412" width="200" height="50"/>
+                                <rect key="frame" x="87" y="418" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GVp-Ml-haH"/>
                                     <constraint firstAttribute="width" constant="200" id="q4p-Ng-liH"/>
@@ -46,7 +46,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-3x-OnP" customClass="ActionButton" customModule="Ripe" customModuleProvider="target">
-                                <rect key="frame" x="113" y="497" width="150" height="50"/>
+                                <rect key="frame" x="113" y="503" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Gjh-yY-8Ij"/>
                                     <constraint firstAttribute="width" constant="150" id="wEN-eA-Pvq"/>
@@ -59,14 +59,8 @@
                                     <action selector="LoginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tED-2D-KhT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-fF-xJb">
-                                <rect key="frame" x="133" y="260" width="109" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXw-Hk-lZa">
-                                <rect key="frame" x="103" y="70" width="170" height="170"/>
+                                <rect key="frame" x="102.5" y="70" width="170" height="170"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pineapple Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-Wm-gm7">
                                         <rect key="frame" x="30" y="30" width="110" height="110"/>
@@ -82,6 +76,12 @@
                                     <constraint firstItem="tuM-Wm-gm7" firstAttribute="leading" secondItem="eXw-Hk-lZa" secondAttribute="leading" constant="30" id="r7j-Ns-xso"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ripe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-fF-xJb">
+                                <rect key="frame" x="125" y="258" width="125" height="73"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="56"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -191,7 +191,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tR4-rs-tvR" id="Efm-fn-7v9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-My-RQn">
@@ -274,7 +274,9 @@
                             <constraint firstAttribute="trailing" secondItem="PE5-AY-lG2" secondAttribute="trailing" id="lIZ-0b-g0z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cart" id="fJl-CR-qeJ"/>
+                    <navigationItem key="navigationItem" title="Cart" id="fJl-CR-qeJ">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="EtT-Wx-d9K"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cartTableView" destination="PE5-AY-lG2" id="aiM-ji-xwU"/>
                         <outlet property="checkoutButton" destination="45L-6c-faH" id="mMh-9E-OCU"/>

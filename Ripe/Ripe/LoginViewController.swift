@@ -31,12 +31,12 @@ class LoginViewController: UIViewController {
     
     func customizeTextField() {
         usernameField.addBottomBorder()
-        usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        usernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.init(white: 40, alpha: 0.6)])
         usernameField.autocapitalizationType = UITextAutocapitalizationType.sentences
         usernameField.returnKeyType = .next
         
         passwordField.addBottomBorder()
-        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.init(white: 40, alpha: 0.6)])
         passwordField.autocapitalizationType = UITextAutocapitalizationType.none
         passwordField.returnKeyType = .done
     }
