@@ -148,7 +148,7 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         }
         
         if let destination = segue.destination as? AddToCartViewController {
-            destination.predicted = self.predictLabel!
+            destination.nameToLoad = self.predictLabel!
         }
     }
     
