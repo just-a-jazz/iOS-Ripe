@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -191,7 +191,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tR4-rs-tvR" id="Efm-fn-7v9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-My-RQn">
@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="5743.1999999999998" y="179.46026986506749"/>
         </scene>
-        <!--View Controller-->
+        <!--Child Item View Controller-->
         <scene sceneID="ds1-1G-xu4">
             <objects>
-                <viewController id="qBm-4K-PU0" sceneMemberID="viewController">
+                <viewController id="qBm-4K-PU0" customClass="ChildItemViewController" customModule="Ripe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05d-Z0-AbF"/>
                         <viewControllerLayoutGuide type="bottom" id="uVb-cx-WOh"/>
@@ -357,7 +357,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-Ab-UwW">
-                                <rect key="frame" x="0.0" y="175" width="375" height="484"/>
+                                <rect key="frame" x="0.0" y="175" width="375" height="363"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e1X-Ws-Raf">
@@ -377,13 +377,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-yI-kdS">
+                                <rect key="frame" x="113" y="571" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ty1-Xc-Yzo"/>
+                                    <constraint firstAttribute="width" constant="150" id="vBZ-1C-mPW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q3G-yI-kdS" firstAttribute="centerX" secondItem="ImT-9Z-01v" secondAttribute="centerX" id="KPd-vk-QeV"/>
+                            <constraint firstItem="uVb-cx-WOh" firstAttribute="top" secondItem="Q3G-yI-kdS" secondAttribute="bottom" constant="46" id="uxE-Qo-6w6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryNameLabel" destination="8dv-ya-1If" id="5hn-IP-GaQ"/>
+                        <outlet property="coverImageView" destination="osd-Gp-u94" id="lHb-o5-Kzp"/>
+                        <outlet property="productCollectionView" destination="Jye-Ab-UwW" id="Lio-jZ-T8r"/>
+                        <outlet property="recognizeImageButton" destination="Q3G-yI-kdS" id="W2u-9m-UgZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aff-aI-iVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6638" y="179"/>
+            <point key="canvasLocation" x="6637.6000000000004" y="178.56071964017991"/>
         </scene>
         <!--Add To Cart View Controller-->
         <scene sceneID="7M6-7r-XRZ">
@@ -503,6 +521,6 @@
         <image name="Pineapple Icon" width="319" height="741"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fgr-NN-MjE"/>
+        <segue reference="PJ4-p8-i6L"/>
     </inferredMetricsTieBreakers>
 </document>
