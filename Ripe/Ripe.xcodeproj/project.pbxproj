@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		189AD5C91E7519BE00088545 /* SelectionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */; };
+		189AD5CB1E752C3100088545 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AD5CA1E752C3100088545 /* SelectionViewController.swift */; };
 		34D07BBB1E74A96D00E1ABCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */; };
 		34D07BC01E74A96D00E1ABCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BBE1E74A96D00E1ABCF /* Main.storyboard */; };
 		34D07BC21E74A96D00E1ABCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D07BC11E74A96D00E1ABCF /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionPageViewController.swift; sourceTree = "<group>"; };
+		189AD5CA1E752C3100088545 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		34D07BB71E74A96D00E1ABCF /* Ripe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34D07BBF1E74A96D00E1ABCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			children = (
 				34D07BBA1E74A96D00E1ABCF /* AppDelegate.swift */,
 				34D07BBE1E74A96D00E1ABCF /* Main.storyboard */,
+				189AD5CA1E752C3100088545 /* SelectionViewController.swift */,
+				189AD5C81E7519BE00088545 /* SelectionPageViewController.swift */,
 				34D07C001E74C29E00E1ABCF /* Extensions.swift */,
 				34D07BF11E74AF1E00E1ABCF /* ProductListCollectionViewController.swift */,
 				34D07BFA1E74B69400E1ABCF /* ProductListCollectionViewCell.swift */,
@@ -310,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D07BF21E74AF1E00E1ABCF /* ProductListCollectionViewController.swift in Sources */,
+				189AD5CB1E752C3100088545 /* SelectionViewController.swift in Sources */,
 				34D07C0B1E74EE7B00E1ABCF /* setupTextField.swift in Sources */,
+				189AD5C91E7519BE00088545 /* SelectionPageViewController.swift in Sources */,
 				34D07C011E74C29E00E1ABCF /* Extensions.swift in Sources */,
 				34D07BEC1E74AEF100E1ABCF /* LoginViewController.swift in Sources */,
 				34D07BFB1E74B69400E1ABCF /* ProductListCollectionViewCell.swift in Sources */,
@@ -576,6 +584,7 @@
 				34D07BE11E74A96D00E1ABCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34D07BE21E74A96D00E1ABCF /* Build configuration list for PBXNativeTarget "RipeTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +593,7 @@
 				34D07BE41E74A96D00E1ABCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34D07BE51E74A96D00E1ABCF /* Build configuration list for PBXNativeTarget "RipeUITests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +602,7 @@
 				34D07BE71E74A96D00E1ABCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
