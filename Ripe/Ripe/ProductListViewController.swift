@@ -17,7 +17,7 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
     var predictLabel: String?
     
     @IBOutlet weak var productListCollectionView: UICollectionView!
-    @IBOutlet weak var recognizeButton: ActionButton!
+    @IBOutlet weak var recognizeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,6 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         let uiImg = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         let network = Network()
-        
         predictLabel = network.getPrediction(image: uiImg)
         
         dismiss(animated: true, completion: ({
@@ -154,17 +153,12 @@ class ProductListViewController: UIViewController, UICollectionViewDelegate, UIC
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        
-        if predictLabel == nil {
-            predictLabel = ""
-        }
-        
         if let destination = segue.destination as? SubViewController {
             destination.products = products
         }
         
         if let destination = segue.destination as? AddToCartViewController {
-            destination.productNameLabel.text = predictLabel!
+            destination.predicted = self.predictLabel!
         }
     }
     

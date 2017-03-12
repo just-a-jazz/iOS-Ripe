@@ -320,7 +320,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-TK-mWF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-TK-mWF" customClass="ActionButton" customModule="Ripe" customModuleProvider="target">
                                 <rect key="frame" x="112" y="571" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cKb-Aa-qS8"/>
@@ -342,8 +342,8 @@
                     <connections>
                         <outlet property="productListCollectionView" destination="TUR-em-LST" id="umT-37-h42"/>
                         <outlet property="recognizeButton" destination="CjP-TK-mWF" id="wGa-U8-QIA"/>
-                        <segue destination="qBm-4K-PU0" kind="show" id="zDa-Vc-Hbm"/>
-                        <segue destination="zsg-rz-YxS" kind="show" id="mNq-3N-z3I"/>
+                        <segue destination="qBm-4K-PU0" kind="show" identifier="Show Category" id="zDa-Vc-Hbm"/>
+                        <segue destination="zsg-rz-YxS" kind="show" identifier="Add Cart Item" id="mNq-3N-z3I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcC-PY-nr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,7 +394,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-yI-kdS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3G-yI-kdS" customClass="ActionButton" customModule="Ripe" customModuleProvider="target">
                                 <rect key="frame" x="113" y="571" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ty1-Xc-Yzo"/>
@@ -417,6 +417,7 @@
                         <outlet property="coverImageView" destination="osd-Gp-u94" id="lHb-o5-Kzp"/>
                         <outlet property="productCollectionView" destination="Jye-Ab-UwW" id="Lio-jZ-T8r"/>
                         <outlet property="recognizeImageButton" destination="Q3G-yI-kdS" id="W2u-9m-UgZ"/>
+                        <segue destination="zsg-rz-YxS" kind="show" identifier="Add Cart Item" id="yib-5U-VKk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aff-aI-iVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -541,6 +542,6 @@
         <image name="Pineapple Icon" width="319" height="741"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mNq-3N-z3I"/>
+        <segue reference="yib-5U-VKk"/>
     </inferredMetricsTieBreakers>
 </document>
