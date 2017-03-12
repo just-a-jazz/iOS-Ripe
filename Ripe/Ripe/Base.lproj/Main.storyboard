@@ -21,22 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxS-Dj-PZc">
-                                <rect key="frame" x="139" y="204" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fruit Background" translatesAutoresizingMaskIntoConstraints="NO" id="G66-Zg-zgy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxS-Dj-PZc">
+                                <rect key="frame" x="78" y="290" width="218" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-s8-f3v">
-                                <rect key="frame" x="139" y="260" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-s8-f3v">
+                                <rect key="frame" x="78" y="346" width="218" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-3x-OnP">
-                                <rect key="frame" x="166" y="379" width="38" height="30"/>
+                                <rect key="frame" x="132" y="431" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -44,8 +47,18 @@
                                     <segue destination="l6h-Au-Fnm" kind="show" identifier="Login User" id="zyG-M0-pEI"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pineapple Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tuM-Wm-gm7">
+                                <rect key="frame" x="123" y="67" width="129" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="G66-Zg-zgy" secondAttribute="trailing" id="2hn-EX-V1t"/>
+                            <constraint firstItem="G66-Zg-zgy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Egy-oO-hf1"/>
+                            <constraint firstItem="G66-Zg-zgy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j61-gD-rbw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G66-Zg-zgy" secondAttribute="bottom" id="msP-UT-Lmh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="LoginButton" destination="U3X-3x-OnP" id="nQI-MK-W3S"/>
@@ -55,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="154"/>
+            <point key="canvasLocation" x="165.59999999999999" y="152.47376311844079"/>
         </scene>
         <!--Cart Table View Controller-->
         <scene sceneID="ryl-9c-5xa">
@@ -329,6 +342,10 @@
             <point key="canvasLocation" x="965.60000000000002" y="958.4707646176912"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fruit Background" width="375" height="667"/>
+        <image name="Pineapple Icon" width="200" height="200"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Fgr-NN-MjE"/>
     </inferredMetricsTieBreakers>

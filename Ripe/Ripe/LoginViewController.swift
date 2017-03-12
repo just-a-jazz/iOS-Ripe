@@ -26,7 +26,22 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func customizeUIButton() {
+        
+    }
     
+    func customizeTextField() {
+        UsernameField.backgroundColor = UIColor(colorLiteralRed: 37/255, green: 37/255, blue: 37/255, alpha: 37/255)
+        UsernameField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        UsernameField.autocapitalizationType = UITextAutocapitalizationType.sentences
+        UsernameField.returnKeyType = .next
+        
+        
+        PasswordField.backgroundColor = UIColor(colorLiteralRed: 37/255, green: 37/255, blue: 37/255, alpha: 37/255)
+        PasswordField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        PasswordField.autocapitalizationType = UITextAutocapitalizationType.none
+        PasswordField.returnKeyType = .done
+    }
     
     // MARK: - Actions
     
