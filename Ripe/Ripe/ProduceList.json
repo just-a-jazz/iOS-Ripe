@@ -5,33 +5,40 @@
         "image": "<carrotsImageHere>",
         "isWeighted": true
     },
-    "haden": {
-        "name": "Haden",
-        "price": 1.40,
-        "image": "<hadenManagoImageHere>",
-        "isWeighted": true,
-        "category": "mango"
-    },
-    "keitt": {
-        "name": "Keitt",
-        "price": 1.40,
-        "image": "<keittManagoImageHere>",
-        "isWeighted": true,
-        "category": "mango"
-    },
-    "palmer": {
-        "name": "Palmer",
-        "price": 1.40,
-        "image": "<palmerManagoImageHere>",
-        "isWeighted": true,
-        "category": "mango"
-    },
-    "kent": {
-        "name": "Kent",
-        "price": 1.40,
-        "image": "<kentManagoImageHere>",
-        "isWeighted": true,
-        "category": "mango"
+    "mangoes": {
+        "name": "Mangoes",
+        "image": "<mangoesImagehere>",
+        "cover": "<MangoesCoverImageHere>",
+        "children": {
+            "haden": {
+                "name": "Haden",
+                "price": 1.40,
+                "image": "<hadenManagoImageHere>",
+                "isWeighted": true,
+                "category": "mangoes"
+            },
+            "keitt": {
+                "name": "Keitt",
+                "price": 1.40,
+                "image": "<keittManagoImageHere>",
+                "isWeighted": true,
+                "category": "mangoes"
+            },
+            "palmer": {
+                "name": "Palmer",
+                "price": 1.40,
+                "image": "<palmerManagoImageHere>",
+                "isWeighted": true,
+                "category": "mangoes"
+            },
+            "kent": {
+                "name": "Kent",
+                "price": 1.40,
+                "image": "<kentManagoImageHere>",
+                "isWeighted": true,
+                "category": "mangoes"
+            }
+        }
     },
     "durian": {
         "name": "Durian",
@@ -73,19 +80,19 @@
         "name": "Marang",
         "price": 2.00,
         "image": "<marangImageHere>",
-        "isWeighted": true 
+        "isWeighted": true
     },
     "monstera": {
         "name": "Monstera",
         "price": 0.90,
         "image": "<monsteraImageHere>",
-        "isWeighted": true 
+        "isWeighted": true
     },
     "pawpaw": {
         "name": "Pawpaw",
         "price": 2.00,
         "image": "<pawpawImageHere>",
-        "isWeighted": true 
+        "isWeighted": true
     },
     "pineapple": {
         "name": "Pineapple",

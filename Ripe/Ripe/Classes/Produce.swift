@@ -11,7 +11,10 @@ import UIKit
 class Produce: NSObject {
     var name: String!
     var price: Double!
+    
     var image: String!
+    var cover: String?
+    
     var isWeighted: Bool!
-    var category: [Produce]?
+    var children: [Produce]?
 }

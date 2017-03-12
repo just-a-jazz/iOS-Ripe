@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 private let reuseIdentifier = "ProductListItem"
 
 class ProductListCollectionViewController: UICollectionViewController {
 
+    var products: [Produce]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,13 @@ class ProductListCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.products = self.getProduce()
+            DispatchQueue.main.async {
+                self.collectionView?.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,13 +50,13 @@ class ProductListCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return products.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -90,5 +100,58 @@ class ProductListCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    
+    func getProduce()->[Produce] {
+        let path = Bundle.main.path(forResource: "ProduceList", ofType: "json")
+        let jsonData = NSData(contentsOfFile:path!)
+        let json = JSON(data: jsonData! as Data)
+        return JSONToProduce(json: json)
+    }
+    
+    func JSONToProduce(json: JSON)->[Produce] {
+        var produceArr = [Produce]()
+        
+        for (key, subJson) in json {
+            print(key)
+            let produce = getItem(item: subJson)
+            produceArr.append(produce)
+        }
+        
+        produceArr.sorted(by: {$0.name < $1.name})
+        
+        return produceArr
+        
+    }
+    
+    private func getItem(item: JSON)->Produce {
+        let produce = Produce()
+        
+        produce.name = item["name"].stringValue
+        produce.image = item["image"].stringValue
+        
+        if let cover = item["cover"].stringValue as? String {
+            produce.cover = cover
+        }
+        
+        if let price = item["price"].doubleValue as? Double {
+            produce.price = price
+        }
+        
+        if let weighted = item["weighted"].boolValue as? Bool {
+            produce.isWeighted = weighted
+        }
+        
+        if let category = item["category"].arrayValue as? [JSON] {
+            for child in category {
+                let kid = getItem(item: child)
+                produce.children?.append(kid)
+            }
+            
+            produce.children?.sorted(by: {$0.name < $1.name})
+        }
+        
+        return produce
+    }
 
 }
