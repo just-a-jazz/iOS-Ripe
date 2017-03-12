@@ -38,9 +38,9 @@ class RipeTests: XCTestCase {
     func testHi() {
         let Checkout = CheckoutViewController()
         
-        let result = Checkout.hi()
+        var result = Checkout.hi()
         
-        print(result)
+        print("test")
         XCTAssert(200 == 200)
     }
     
