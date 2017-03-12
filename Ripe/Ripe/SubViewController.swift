@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "ProductChildListItem"
 
 
-class ChildItemViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class SubViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!
