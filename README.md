@@ -20,18 +20,18 @@ The Ripe app integrates with the Square merchant API for fast and secure payment
 We used a neural network for the image recognition portion of the app.
 
 ### Swift Classes
-* LoginViewController: Handles user authentication and landing page for app.
-* ProductListNavigation: Holds header and displays ProductListCollectionViewController.
-* CartTableNavigation: Holds header and displays CartTableViewController.
-* CartTableViewController: Shopping cart for selected items to buy.
-* CartTableViewCell: <not sure>
-* ChildrenItemViewController: <not sure>
-* ProductListCollectionViewController: Categories for produce items.
-* ProductListCollectionViewCell: <not sure>
-* AddToCartViewController: Modify weight or quantity of produce item.
-* CheckoutViewController: Handles user payment and generates a receipt.
-* SelectionViewController: Handles shared UI elements between ProductListNavigation and CartTableNavigation.
-* SelectionPageViewController: Controlls screen interaction between ProductListNavigation and CartTableNavigation.
+* *LoginViewController*: Handles user authentication and landing page for app.
+* *ProductListNavigation*: Holds header and displays ProductListCollectionViewController.
+* *CartTableNavigation*: Holds header and displays CartTableViewController.
+* *CartTableViewController*: Shopping cart for selected items to buy.
+* *CartTableViewCell*: <not sure>
+* *ChildrenItemViewController*: <not sure>
+* *ProductListCollectionViewController*: Categories for produce items.
+* *ProductListCollectionViewCell*: <not sure>
+* *AddToCartViewController*: Modify weight or quantity of produce item.
+* *CheckoutViewController*: Handles user payment and generates a receipt.
+* *SelectionViewController*: Handles shared UI elements between ProductListNavigation and CartTableNavigation.
+* *SelectionPageViewController*: Controlls screen interaction between ProductListNavigation and CartTableNavigation.
 
 ## What's Next
 * Train neural net on large range of fruits, vegetables, etc
@@ -41,6 +41,9 @@ We used a neural network for the image recognition portion of the app.
 
 ## Contributors & Past Experience
 Ali Siddiqui:
+
 Matthew Paletta:
+
 William Grosset: Some experience with Swift 2.0.
+
 Jordan McKinney: Some experience with Machine Learning.
