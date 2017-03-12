@@ -10,6 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
 
     var window: UIWindow?
 

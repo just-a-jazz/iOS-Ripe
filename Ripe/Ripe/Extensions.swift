@@ -22,9 +22,10 @@ extension UIImageView {
 
 extension UITextField {
     func addBottomBorder() {
-        var bottomLine = CALayer()
+        let primaryColor = UIColor(red: 245/255, green: 165/255, blue: 35/255, alpha: 1)
+        let bottomLine = CALayer()
         bottomLine.frame = CGRect(x:0.0, y:self.frame.height - 1, width:self.frame.width, height:2.0)
-        bottomLine.backgroundColor = UIColor.orange.cgColor
+        bottomLine.backgroundColor = primaryColor.cgColor
         self.borderStyle = UITextBorderStyle.none
         self.layer.addSublayer(bottomLine)
     }
