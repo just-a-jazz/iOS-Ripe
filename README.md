@@ -1,4 +1,4 @@
-#Ripe
+# Ripe
 ## Overview
 
 ### Summary
@@ -14,7 +14,7 @@ Ripe allows a cashier to quickly build the customers order and take payment enti
 ## Technologies
 
 ### Neural Net
-We used a neural network for the image recognition portion of the app. 
+Used our own trained neural network running on [Metal](https://developer.apple.com/metal/) for the image recognition portion of the iOS application.
 
 ### Swift Classes
 * **LoginViewController**: Handles user authentication and landing page for app
